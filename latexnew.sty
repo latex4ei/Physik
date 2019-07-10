@@ -1,0 +1,45 @@
+% deps
+\usepackage{mathtools}
+
+%spacing
+\titlespacing*{\subsubsection} {0pt}{0.5ex}{2.0ex}
+\titlespacing*{\subsection} {0pt}{0.5ex}{2.0ex}
+
+%% math commands
+% number spaces
+\newcommand{\R}{\ensuremath\mathbb{R}}
+\newcommand{\Q}{\ensuremath\mathbb{Q}}
+\newcommand{\N}{\ensuremath\mathbb{N}}
+\newcommand{\Z}{\ensuremath\mathbb{Z}}
+% matrix and vectors
+\renewcommand{\v}[1]{\textbf{#1}}
+\newcommand{\ma}[1]{\textbf{#1}}
+% fractions
+\newcommand{\fr}{\dfrac}
+%differentation
+\newcommand{\dd}[1]{\frac{d}{d#1}}
+\newcommand{\dt}[1]{\frac{d#1}{dt}}
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\grad}{\nabla}
+% limits and sums
+\let\limi\lim
+\let\liminfi\liminf
+\let\limsupi\limsup
+\let\sumi\sum
+\renewcommand{\lim}{\limi\limits}
+\renewcommand{\sum}{\sumi\limits}
+% abs and norm (https://tex.stackexchange.com/questions/43008/absolute-value-symbols)
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother

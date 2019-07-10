@@ -1,0 +1,86 @@
+% .:: Laden der LaTeX4EI Formelsammlungsvorlage
+\documentclass[fs, footer]{latex4ei}
+\usepackage[european]{circuitikz}
+
+\usepackage{multirow}
+\usepackage{latexnew}
+
+
+% Dokumentbeginn
+% ======================================================================
+\begin{document}
+
+
+% Aufteilung in Spalten
+\vspace{-4mm}
+\begin{multicols*}{4}
+	\fstitle{Physik}
+
+	\emphbox{
+	\textbf{Wichtiger Hinweis}
+	\\ Diese Formelsammlung ist noch in der Entwicklung und nicht prüfungstauglich ! \\ Allerdings würden wir uns über Unterstützung freuen das zu ändern. Wer Lust hat kann uns über das Kontaktformular auf www.latex4ei.de erreichen.
+	}
+% ===============================================================================================
+\section{Messgenauigkeit und Messfehler}
+Systematischer Fehler: Abweichung einer Messung von ihrem Erwartungswert\\
+Statistischer Fehler: Entstehung durch zufällige positive bzw. negative Abweichungen\\
+Arithmetischer Mittelwert: $\ol x = \fr{1}{n}\sum_{i=1}^n x_i$\\
+Standartabweichung: $s = \sigma = \sqrt{\fr{1}{n-1}\sum_{i=1}^n (x_i-\ol x)^2}$\\
+Normalverteilung/Gauß-Funktion: $g(x) = \fr{1}{\sigma \sqrt{2\pi}\exp(-\fr{(x-\ol x)^2}{2\sigma^2})}$\\
+Näherungsweise gilt: 
+\begin{itemize}
+\item 68\% aller Messwerte haben eine Abweichung < $\pm \sigma$ vom Mittelwert.
+\item 95\% aller Messwerte haben eine Abweichung < $\pm 2\sigma$ vom Mittelwert.
+\item 99,8\% aller Messwerte haben eine Abweichung < $\pm 3\sigma$ vom Mittelwert.
+\end{itemize}
+%TODO Fehlerfortpflanzung
+\section{Kinetik}
+momentane Geschwindigkeit: $v = \dot r$\\
+mittlere Geschwindigkeit: $v_m = \fr{\Delta r}{\Delta t}$\\
+\subsection{Galilei Transformation}
+Gilt nur für $v<<c$\\
+$x' = x - ut$ und $t' = t$ mit der Geschwindigkeit $u$ des bewegten Systems $\ra \dt x = \dt{x'} + u$\\
+\subsection{Schiefe Ebene}
+Gewichtskraft: $F_G = mg$\\
+Normalkraft: $F_N = mg\cos \alpha$\\
+Hangabtriebskraft: $F_H = F_A = mg\sin \alpha$\\
+Reibung: Körper steht, falls $F_{Haft} = F_{Hang}$\\
+kritischer Neigungswinkel: $tan \alpha = \mu_h$\\
+
+\section{Kraft}
+Gravitationskraft: $F_G = -G \fr{m_1m_2}{r_{12}^2}$, mit $G = 6,67\cdot 10^{-11} \fr{Nm^2}{kg}$\\
+Zentripetalkraft: $F_Z = m \fr{v^2}{r} = m\omega r$\\
+Federkraft: $F_F = -kx$\\
+mittlere Kraft: $\abs{<\v F>} = \abs{\fr{\Delta p}{\Delta t}} = \abs{\fr{m(v_E - v_A)}{\Delta t}}$\\
+\section{Arbeit}
+	$W = \int_{r_1}^{r_2} F dr$ bzw. $W = Fs\cos \alpha$\\
+
+\section{Energie}
+potentielle Energie: $E_{pot} = mgh$\\
+kinetische Energie: $E_{kin} = \fr{1}{2}mv^2$\\
+\subsection{Energieerhaltung}
+Grundprinzip: $E_{vorher} = E_{nachher}$\\
+
+\section{Stöße}
+Impuls: $p = mv$, $F=\dot p$\\
+\subsection{Inelastischer Stoß}
+Massen bilden gemeinsame Masse: $v_1' = v_2' = v'$\\
+\subsection{Elastischer Stoß}
+Fall $m_1 = m_2$: $v_1' = v_2, v_2' = v_1$\\
+Fall $m_1 = m_2, v_1 \neq 0, v_2 = 0$: $v_1' = 0, v_2' = v_1$\\
+
+\section{Galilei-Transformation}
+Transformation erleichtert Bezugssystem mit konstanter Geschwindigkeit
+-> Berechnung im Schwerpunktsystem
+
+\section{Drehungen}
+Drehmoment: $\v M = \v r \times \v F$\\
+
+
+
+
+	
+\end{multicols*}
+\end{document}
+
+
