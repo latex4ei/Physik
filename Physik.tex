@@ -16,6 +16,7 @@
 \begin{multicols*}{4}
 	\fstitle{Physik}
 
+
 	\emphbox{
 	\textbf{Wichtiger Hinweis}
 	\\ Diese Formelsammlung ist noch in der Entwicklung und nicht prüfungstauglich ! \\ Allerdings würden wir uns über Unterstützung freuen das zu ändern. Wer Lust hat kann uns über das Kontaktformular auf www.latex4ei.de erreichen.
@@ -34,6 +35,10 @@ Näherungsweise gilt:
 \item 99,8\% aller Messwerte haben eine Abweichung < $\pm 3\sigma$ vom Mittelwert.
 \end{itemize}
 %TODO Fehlerfortpflanzung
+
+\section{Konstanten}
+$ \epsilon_0 = 8.85*10^{12} \fr{C^2}{Nm^2}$\\
+
 \section{Kinetik}
 momentane Geschwindigkeit: $v = \dot r$\\
 mittlere Geschwindigkeit: $v_m = \fr{\Delta r}{\Delta t}$\\
@@ -47,19 +52,51 @@ Hangabtriebskraft: $F_H = F_A = mg\sin \alpha$\\
 Reibung: Körper steht, falls $F_{Haft} = F_{Hang}$\\
 kritischer Neigungswinkel: $tan \alpha = \mu_h$\\
 
+\subsection{Eindimensionale Bewegungen}
+Mittlere Beschleunigung: $a = \dt v$\\
+Gleichförmige, geradlinige Bewegung: $x(t) = v_0t+c$\\
+Gleichförmig beschleunigte Bewegung: $x(t) = \fr{1}{2}a_0t^2+v_0t+x_0$\\
+\subsubsection{Konstante Geschwindigkeit}
+Momentane Geschwindigkeit: $v = \dt r$\\
+\subsection{Zweidimensionale Bewegungen}
+Unabhängige Bewegungen in den einzelnen Raumrichtungen
+Schiefer Wurf:
+Berechnung von z(x) durch Eliminieren von t: \\$x(t) = v_{0x}t \Rightarrow t = \fr{x}{v_{0x}}$\\
+$z(x) = -\fr{1}{2}g(\fr{{x}}{v_{0x}})^2 + \fr{v_{0z}}{v_{0x}}x = -\fr{g}{2v^2_{x0}}x^2 + tan\theta x$\\
+\subsection{Kreisbewegung}
+Winkel $\phi = \fr{s}{r}$, 	Bogenlänge $s$, Radius $r$, Umlaufdauer $T$\\
+Kreisfrequenz $\omega = \dt \phi =\fr{2\pi}{f}$,	Frequenz $f$\\
+Krummlinige Bewegung: $\ \v a = \dt {\v v} = \v a_t + \v a_{zp}$,	Tangetialbeschl. $a_t$\\
+\subsection{Pendel}
+$\omega = \sqrt{\fr{g}{l}}$\\
+
 \section{Kraft}
+%TODO Eventuell Newtonsche Gesetze, mt =/= const VL4
+Kräfte werden vektoriell addiert: $\v F_{ges} = \sum_{i=1}^n \v F_i$\\
 Gravitationskraft: $F_G = -G \fr{m_1m_2}{r_{12}^2}$, mit $G = 6,67\cdot 10^{-11} \fr{Nm^2}{kg}$\\
 Zentripetalkraft: $F_Z = m \fr{v^2}{r} = m\omega r$\\
-Federkraft: $F_F = -kx$\\
+Federkraft (Hooke'sches Gesetz): $\v F_F = -k\v x$\\
 mittlere Kraft: $\abs{<\v F>} = \abs{\fr{\Delta p}{\Delta t}} = \abs{\fr{m(v_E - v_A)}{\Delta t}}$\\
+Coulombkraft: $F = \fr{1}{4 \pi \epsilon_0}\fr{Q_1Q_2}{r^2}$\\
+Reibungskräfte allgemein: $\v F_R = \mu \v F$	,z.B. Haft-, Gleit- und Rollreibung\\
+Körper beginnt zu rutschen, wenn $\mu_H >= tan \theta$\\
+Luftwiderstand: $\v F_W = \frac{1}{2}\rho c_WAv^2$ $\rho$ hier Luftdichte\\
+
+%TODO Evtl subsection Scheinkräfte VL5
+
 \section{Arbeit}
-	$W = \int_{r_1}^{r_2} F dr$ bzw. $W = Fs\cos \alpha$\\
+Generell: $W = \int_{r_1}^{r_2} F dr$ bzw. $W = Fs\cos \alpha$\\
+Spannarbeit an einer Feder: $W = \fr{1}{2} k(x-x_a)^2 $\\
 
 \section{Energie}
 potentielle Energie: $E_{pot} = mgh$\\
 kinetische Energie: $E_{kin} = \fr{1}{2}mv^2$\\
 \subsection{Energieerhaltung}
 Grundprinzip: $E_{vorher} = E_{nachher}$\\
+Gesamte Rotationsenergie: $E_{rot} = (\sum_{i=1}^N \fr{1}{2} \Delta m_ir_{i\perp}^2\omega ^2$\\
+
+\section{Leistung}
+$P = \dt W = \v F\v V = \dt E$\\
 
 \section{Stöße}
 Impuls: $p = mv$, $F=\dot p$\\
@@ -68,6 +105,9 @@ Massen bilden gemeinsame Masse: $v_1' = v_2' = v'$\\
 \subsection{Elastischer Stoß}
 Fall $m_1 = m_2$: $v_1' = v_2, v_2' = v_1$\\
 Fall $m_1 = m_2, v_1 \neq 0, v_2 = 0$: $v_1' = 0, v_2' = v_1$\\
+$\v v_{1,end} = \frac{1}{m_1+m_2}{(m_1-m_2)\v v{1,anf} + 2m_1\v v_{2,anf}}$\\
+
+%TODO Massenmittelpunkt VL8
 
 \section{Galilei-Transformation}
 Transformation erleichtert Bezugssystem mit konstanter Geschwindigkeit
@@ -75,7 +115,17 @@ Transformation erleichtert Bezugssystem mit konstanter Geschwindigkeit
 
 \section{Drehungen}
 Drehmoment: $\v M = \v r \times \v F$\\
+Drehimpuls: $\v L = \v r \times \v p$\\
+%TODO \rightarrow \v L = mr^2 \v \omega \rightarrow \v L = J \v \omega $\\
+Trägheitsmoment: $J = \sum_{i=1}^n m_iR_i^2$\\
+%TODO VL 8 S21 Tabelle Trägheitsmomente
+Satz von Steiner: $J = J_S + Md^2$ Bei bel. Achse A: Summe vom $J_S$ der Rotation durch Schwerpunkt + $Md^2$ von Schwerpunkt um A\\
 
+
+
+\section{Hydromechanik}
+ideale Gasgleichung: $ \fr{\rho _0}{P_0} = \fr{M}{RT}$\\
+Luftdruck:
 
 
 
