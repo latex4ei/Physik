@@ -37,7 +37,7 @@ Näherungsweise gilt:
 %TODO Fehlerfortpflanzung
 
 \section{Konstanten}
-$ \epsilon_0 = 8.85*10^{12} \fr{C^2}{Nm^2}$\\
+$ \epsilon_0 = 8.85\cdot 10^{12} \fr{C^2}{Nm^2}$\\
 
 \section{Kinetik}
 momentane Geschwindigkeit: $v = \dot r$\\
@@ -49,7 +49,7 @@ $x' = x - ut$ und $t' = t$ mit der Geschwindigkeit $u$ des bewegten Systems $\ra
 Gewichtskraft: $F_G = mg$\\
 Normalkraft: $F_N = mg\cos \alpha$\\
 Hangabtriebskraft: $F_H = F_A = mg\sin \alpha$\\
-Reibung: Körper steht, falls $F_{Haft} = F_{Hang}$\\
+Reibung: Körper steht, falls $F_{\text{Haft}} = F_{\text{Hang}}$\\
 kritischer Neigungswinkel: $tan \alpha = \mu_h$\\
 
 \subsection{Eindimensionale Bewegungen}
@@ -59,7 +59,7 @@ Gleichförmig beschleunigte Bewegung: $x(t) = \fr{1}{2}a_0t^2+v_0t+x_0$\\
 \subsubsection{Konstante Geschwindigkeit}
 Momentane Geschwindigkeit: $v = \dt r$\\
 \subsection{Zweidimensionale Bewegungen}
-Unabhängige Bewegungen in den einzelnen Raumrichtungen
+Unabhängige Bewegungen in den einzelnen Raumrichtungen\\
 Schiefer Wurf:
 Berechnung von z(x) durch Eliminieren von t: \\$x(t) = v_{0x}t \Rightarrow t = \fr{x}{v_{0x}}$\\
 $z(x) = -\fr{1}{2}g(\fr{{x}}{v_{0x}})^2 + \fr{v_{0z}}{v_{0x}}x = -\fr{g}{2v^2_{x0}}x^2 + tan\theta x$\\
@@ -69,6 +69,15 @@ Kreisfrequenz $\omega = \dt \phi =\fr{2\pi}{f}$,	Frequenz $f$\\
 Krummlinige Bewegung: $\ \v a = \dt {\v v} = \v a_t + \v a_{zp}$,	Tangetialbeschl. $a_t$\\
 \subsection{Pendel}
 $\omega = \sqrt{\fr{g}{l}}$\\
+\subsection{Stöße}
+Impuls: $p = mv$, $F=\dot p$\\
+\subsubsection{Inelastischer Stoß}
+Massen bilden gemeinsame Masse: $v_1' = v_2' = v'$\\
+\subsubsection{Elastischer Stoß}
+Fall $m_1 = m_2$: $v_1' = v_2, v_2' = v_1$\\
+Fall $m_1 = m_2, v_1 \neq 0, v_2 = 0$: $v_1' = 0, v_2' = v_1$\\
+$\v v_{\text{1,end}} = \frac{1}{m_1+m_2}{(m_1-m_2)\v v_{\text{1,anf}} + 2m_1\v v_{\text{2,anf}}}$\\
+
 
 \section{Kraft}
 %TODO Eventuell Newtonsche Gesetze, mt =/= const VL4
@@ -80,7 +89,7 @@ mittlere Kraft: $\abs{<\v F>} = \abs{\fr{\Delta p}{\Delta t}} = \abs{\fr{m(v_E -
 Coulombkraft: $F = \fr{1}{4 \pi \epsilon_0}\fr{Q_1Q_2}{r^2}$\\
 Reibungskräfte allgemein: $\v F_R = \mu \v F$	,z.B. Haft-, Gleit- und Rollreibung\\
 Körper beginnt zu rutschen, wenn $\mu_H >= tan \theta$\\
-Luftwiderstand: $\v F_W = \frac{1}{2}\rho c_WAv^2$ $\rho$ hier Luftdichte\\
+Luftwiderstand: $\v F_W = \frac{1}{2}\rho c_WAv^2$ mit $\rho$: Luftdichte\\
 
 %TODO Evtl subsection Scheinkräfte VL5
 
@@ -98,34 +107,172 @@ Gesamte Rotationsenergie: $E_{rot} = (\sum_{i=1}^N \fr{1}{2} \Delta m_ir_{i\perp
 \section{Leistung}
 $P = \dt W = \v F\v V = \dt E$\\
 
-\section{Stöße}
-Impuls: $p = mv$, $F=\dot p$\\
-\subsection{Inelastischer Stoß}
-Massen bilden gemeinsame Masse: $v_1' = v_2' = v'$\\
-\subsection{Elastischer Stoß}
-Fall $m_1 = m_2$: $v_1' = v_2, v_2' = v_1$\\
-Fall $m_1 = m_2, v_1 \neq 0, v_2 = 0$: $v_1' = 0, v_2' = v_1$\\
-$\v v_{1,end} = \frac{1}{m_1+m_2}{(m_1-m_2)\v v{1,anf} + 2m_1\v v_{2,anf}}$\\
+
 
 %TODO Massenmittelpunkt VL8
 
 \section{Galilei-Transformation}
 Transformation erleichtert Bezugssystem mit konstanter Geschwindigkeit
--> Berechnung im Schwerpunktsystem
+$\rightarrow$ Berechnung im Schwerpunktsystem
 
 \section{Drehungen}
 Drehmoment: $\v M = \v r \times \v F$\\
 Drehimpuls: $\v L = \v r \times \v p$\\
 %TODO \rightarrow \v L = mr^2 \v \omega \rightarrow \v L = J \v \omega $\\
-Trägheitsmoment: $J = \sum_{i=1}^n m_iR_i^2$\\
+Trägheitsmoment: $J = \sum_{i=1}^n m_iR_i^2 = \int_V r_\perp^2\rho dV$\\
 %TODO VL 8 S21 Tabelle Trägheitsmomente
-Satz von Steiner: $J = J_S + Md^2$ Bei bel. Achse A: Summe vom $J_S$ der Rotation durch Schwerpunkt + $Md^2$ von Schwerpunkt um A\\
+Satz von Steiner: $J = J_S + Md^2$ Bei bel. Achse A: Summe vom $J_S$ der Rotation durch Schwerpunkt + $Md^2$ von Schwerpunkt um A\\ %TODO BESSER
+$E_{kin}(\Delta m_i)=\frac{1}{2}\Delta m_iv_i^2=\frac{1}{2}\Delta m_ir_{i\perp}^2 \omega^2$\\
+Gesamte Rotationsenergie: $E_{\text{rot}}=\lim_{N \rightarrow \infty} (\sum_i^N  \fr{1}{2}\Delta m_ir_{i\perp}^2 \omega^2)=\frac{1}{2} \omega ^2\int_Vr_\perp^2 dm$\\
+Für ein Teichensystem: $J = \sum_{i}m_ir_{i\perp}^2 \Rightarrow E_{\text{rot}}=\fr{1}{2}J\omega^2$\\
+\subsubsection{Trägheitsmomente}
+Vollzylinder: $J = \fr{1}{2}h\pi \rho R^4$\\
+Hohlzylinder: $J = \fr{1}{2}h\pi \rho[R^4-(R-d)^4] \approx 2 \pi h\rho R^3d$\\
+Masse des Mantels: $M \approx 2 \pi R h d \rho$\\
+Energieerhalt. rollender Zylinder: $E_{\text{pot}} = E_{\text{kin,translation}} + E_{\text{rotation}} \rightarrow mgh = \fr{1}{2}mv_s^2 + \fr{1}{2}J\omega ^2; s = r\alpha, v = r\omega$\\
+%TODO Tabelle Trägheitsmomente Demtröder VL9 S11
+%TODO evtl analogien Translation Rotation VL10
 
+\section{Planetenbewegung}
+1. Keplersches Gesetz: Planetenbahnen sind Ellipsen um Sonne in einem der beiden Brennpunkte\\
+2. Keplersches Gesetz: In gleicher Zeit wird die gleiche Flaeche an einer Bahn aufgespannt\\$\frac{dA}{dt} = \frac{1}{2} \v r \v v sin \alpha = \frac{1}{2}\v r \times \v v = fr{1}{2m}|\v L| \Rightarrow$ Drehimpuls ist zeitlich konstant\\
+3. Keplersches Gesetz: $\frac{T_1^2}{T_2^2} = \frac{a_1^3}{a_2^3}$\\
+%TODO evtl Spezialfall Kreisbahn
 
+\section{Schwingungen}
+\subsection{Harmonische Schwingungen} $x(t) = A \cos(\omega_0t + \Phi)$\\
+A = Amplitude; $\omega$ = Kreisfrequenz [rad/s]; f = Frequenz[1/s]; T = Schwingungsdauer 1/f; $\phi$ = Phasenkonstante;\\
+$\omega ^2 = \frac{\text{Rücktreibende Kraft}}{\text{Einheitsmasse $\times$ Einheitsauslenkung}} = \frac{k}{m};	\omega = 2 \pi f \rightarrow f = \frac{1}{2\pi}\sqrt{\frac{k}{m}}$\\
+Energiebilanz: $E_{\text{ges}} = E_{\text{pot}} + E_{\text{kin}} = \frac{1}{2}kx^2+\frac{1}{2}mv^2$\\
+\subsection{Mathematisches Pendel} $F = -mg \sin \theta \approx -mg \theta$ %TODO : Bis 15$°:$ Fehler $<1%$\\
+$x = l\theta ; F=-\frac{mg}{l}x$\\
+Hooke'sches Gesetz: Kraft proportional zur Auslenkung\\
+\subsection{Torsionsschwingungen}
+Elastisches Rückstelldrehmoment $M = -D\theta = J\alpha$\\
+$\alpha = \frac{d^2 \theta}{dt^2}; \frac{d^2\theta}{dt^2}+\frac{D}{J}\theta	= 0; \omega = \sqrt{\frac{D}{J}}$\\
+\subsection{Gedämpfter harmonischer Oszillator}
+Stoke'sche Reibungskraft: $F_R = -bv = -bx$\\
+Bewegungsgleichung: $\ddot{x} + 2\gamma \dot{x} + \omega_0^2x = 0$; mit 2$\gamma$ = $\frac{b}{m}$\\
+Lösungsansatz mit Cosinus: $x = Ae^{-\gamma t} \cos(\omega 't)$ \\mit $\omega ' = \sqrt{\omega_0^2-\gamma^2}$\\
+schwache Dämpfung: $x = Ae^{-\gamma \frac{-t}{t_L}} \cos(\omega 't); \gamma = \frac{b}{2m}; \omega_0 = \sqrt{\frac{k}{m}}$\\
+aperiodischer Grenzfall: $\gamma = \omega_0 \rightarrow	\omega' = 0$\\
+überkritische Dämpfung: $\omega \ll \omega_0 \rightarrow \omega' = \sqrt{\omega_0^2 - \gamma^2}$ = img. $\omega'$ wird imaginär. Das System schwingt nicht, kehrt langsam in GGP zurück\\ 
+$t_L$ = mittlere Lebensdauer, Zeit auf 1/e der Amplitude\\
+\\Überlagerung von Schwingungen: $x(t)=\sum_nx_n(t)=\sum_na_n\cos{\omega_nt+\delta_n}$\\
+%TODO evtl Log Dekrement VL 11, mehr zu Diffgl und erzw Schwing
 
 \section{Hydromechanik}
 ideale Gasgleichung: $ \fr{\rho _0}{P_0} = \fr{M}{RT}$\\
 Luftdruck:
+
+\section{Wellen}
+Polarisation in Materie: $\v P = \chi_e\varepsilon_0\v E$ $\chi_e:$ Elektrische Suszeptibilität, Materialeigenschaft, allg komplex\\
+Longitudinale Welle: Auslenkung in Ausbreitungsrichtung\\
+Transversale Welle: Auslenkung normal zur Ausbreitungsrichtung\\
+Geschwindigkeit Seilwelle: $v = \sqrt{\frac{F_T}{\mu}}$\\ %TODO evtl S11 VL11 mit Bild
+%TODO Formeln Geschwindigkeit VL11
+Elastizitätsmodul: $E = \frac{F / A}{\Delta l / l}$\\
+Kompressionsmodul: $K = \frac{-p}{\Delta V / V}$\\
+Ausbreitungsgeschwindigkeit Transversaal $v = \sqrt{\frac{F}{\mu}}$\\
+Ausbreitungsgeschwindigkeit Longitudinal $v_\text{l} = \sqrt{\frac{E}{\rho}}$\\
+Ausbreitungsgeschwindigkeit in Gasen: $v_\text{l,Gas} =  = \sqrt{\frac{K}{\rho}}$\\
+Schwingungsenergie des Teilchens: $E = \frac{1}{2}kD_M^2$\\
+$k = 4\pi ^2mf^2; E = 2\pi^2mf^2D_M^2$\\
+$m = \rho V = \rho A v t; \Delta E = \Delta E = 2\pi^2 \rho A v \Delta tf^2D_M^2$\\
+%TODO v durch kappa oder was auch immer ersetzen
+Durchschnittliche Leistung: $P (Strich) = fr{\Delta E}{\Delta t} = 2\pi ^2 \rho a v f^2 D_M^2$\\
+
+Intensität: $ I = \fr{P (Strich)}{A} = 2\pi^2\rho v f^2D_M^2$\\
+Intensität sphärische Welle: $I = \frac{P (dach)}{r\pi r^2}$\\
+$D_M \propto \frac{1}{r}$\\
+%TODO Mathematische Beschreibung der Wellenausbreitung, Wellengleichung VL12
+Schallpegel = $L = 10\log{\frac{I}{I_0}}$ mit $I_0 = 10^{-12}\frac{W}{m^2}$\\
+Einheit db: 1 Bel = 10db\\
+%TODO evtl Schallpegeltabelle
+%TODO Superpositionsprinzip VL13
+\\
+Reflexion bei elektrischen Leitungen: $ r = \frac{Z_L-Z_0}{Z_L+Z_0}$\\
+%TODO subsection Interferenz VL13, Überlagerung von Wellen unterschiedlicher Frequenz
+
+\subsection{Geometrische Optik}
+$f\cdot\lambda = c$\\
+$c_0=2,99792458\cdot 10^8 \frac{m}{s} = \frac{1}{srt{\epsilon_0 \mu_0}}$\\
+%TODO was ist Licht?
+Energie Photonen: $h\cdot v$ mit $h=6.626\cdot10^{-34}\frac{J}{s}$\\
+Brechungsindex $n = \frac{c}{v}$\\
+Dielektrizitätskonstante $\varepsilon = n^2 $\\
+ Brechungsgesetz von Snellius: $\frac{\sin\theta_1}{\sin\theta_2} = \frac{v_1}{v_2}  = \frac{c/n_1}{c/n_2} = \frac{n_2}{n_1}$\\
+Snellius'sche Gesetz für bestimmte Winkel: $n_1\sin\theta 1 = n_2\sin\theta 2$\\
+Licht bricht immer zum Medium mit dem höheren Index hin\\
+Fermatsches Prinzip:\\
+Licht folgt dem Weg mit der kürzesten Laufzeit$: \frac{dt}{dx} = 0$\\
+%TODO evtl Fata Morgana
+Optische Wand, parallelverschiebung um $\Delta d: d = t\cdot\sin(\alpha)\cdot[1-\frac{\cos(\alpha}{\sqrt{n^2-sin^2(\alpha}}]$\\ %TODO große Klammer
+Totalreflexion: falls $\theta>\theta_g$: $\sin(\theta_g) = \frac{n2}{n1}$\\
+%TODO evtl Propagationsverluste in der Glasfaser oder was auch immer
+%TODO Bild vom Prisma einfügen VL15 S20
+\\Brechungsindex n ist frequenzabhängig $n = n(\omega)$\\
+Dispersion: $v(\omega)$\\
+Maxwell Relation: $n = \sqrt{\varepsilon_r} = \sqrt{1+\chi_E}$\\
+Elektrische Suszeptibilität: $\v P = N \cdot \v p$\\% %TODO war das nicht schon oben? N im text
+%TODO Bewegungsgleichung erzwungene Schwingung VL16 S7
+$x_0 = \frac{eE_0}{m(\omega_0^2-\omega^2}$\\
+$\omega < \omega_0$: Auslenkung in Phase,
+$\omega > \omega_0$: Auslenkung gegen Phase $F_{el}$\\
+Dipolmoment: $|\v p(t)| = e\cdot x(t) = | \frac{e^2E_0\cdot sin(\omega t)}{m(\omega_0^2-}\omega^2|$\\ %TODO große Betragsstriche
+$\chi _e(\omega) = \frac{Ne^2}{\varepsilon_0(\omega_0^2 - \omega^2)}$\\
+Sellmeier Gleichung: $n^2(\lambda) = 1 + \frac{B_1\lambda^2}{\lambda^2-C_1}\frac{B_2\lambda^2}{\lambda^2-C_2}\frac{B_2\lambda^2}{\lambda^2-C_2}$\\ mit $B_i und C_i (i \in 1-3)$ Sellmeier Koeffizienten, experimentell ermittelt\\
+Anormale Dispersion: n steigt mit $\lambda$\\
+Normale Dispersion: n fällt mit $\lambda$\\
+\subsection{Abbildung}
+Entweder reales Bild oder virtuelles Bild (z.B. Spiegel)\\
+%TODO Spiegelarten und Strahlengang evtl mit Bildern
+Strahlenkonstruktion allgemein: $\frac{1}{b}= \frac{1}{f} - \frac{1}{g}$\\
+fokale Länge f = $\frac{r}{2}$; Gegenstandsweite g; Bildweite b\\
+Vorzeichen korrekt wählen %TODO Tabelle VL16 S18
+%TODO Linsenarten mit Bildern evtl
+Abbildungsmaßstab $V = \frac{B}{G}=\frac{-b}{g}$ mit V negativ: Bild umgekehrt\\
+\subsubsection{Linsen}
+Linsengleichung:
+Gegenstandseite: $\frac{f}{g} = \frac{B}{B+G}$
+Bildseite: $\frac{f}{b}= \frac{G}{G+B}$\\
+Dünne vs dicke Linsen
+Reziproke Brennweite = Brechkraft $\rightarrow$ Einheit Dioptrie [D]= 1dpt = $\frac{1}{m}$\\
+$g>f$: Reelles Bild;
+$g<f$: Virtuelles Bild\\
+Berechnung Brennweite: $\frac{1}{f}=(n-1)(\frac{1}{r_1}-\frac{1}{r_2})$\\
+
+\subsubsection{Le Auge}
+Weitsichtigkeit: Bild naher Gegenstände hinter Netzhaut $\rightarrow$ Korrketure durch Sammelkeslinse\\
+Kurzischtigkeit: Bild weiter Gegenstandesr vor Netrtzthauuta $\rightarrow$Korrektur durch Zerstreuungslinse\\
+Stabsichtige Auge (AstigmaAutismus): abnormale Hornhautverkrümmung $\rightarrow$Korrektur durch Zylinderlinsen\\
+\\Sehwinkel/räumliche Auflösung des Auges: $\varepsilon_0^{min} \approx 1" \Rightarrow \Delta x_{\text{min}} = S_0\cdot\varepsilon_o^{min} \approx 70 \mu m$\\
+%TODO Die Lupe, Das Fernrohr VL17
+Mikroskop: $V_{\text{Mikroskop}} = \frac{(l-f_e)\cdot L_d}{d_0\cdot f_e} = \beta_{\text{Objektiv}}\cdot V_{\text{Okular}}$\\
+Vergrößerung Okular: $V_{\text{Okular}} = \frac{L_d}{F_e}$ $L_d$ = deutliche Sehweite des Mensche, ca 250mm\\
+Auflösungsgrenze bei ca 1000-facher Vergrößerung\\
+%TODO Dicke Linsen S16 VL 17, Fresnel Linse
+
+\subsection{Abbildungsfehler (Abberationen} %TODO ausarbeiten VL17,evtl mit Bildern
+\subsubsection{Schärfefehler}
+Sphärische Abberationen: Groößerer EInfallswinkel am Rand $\rightarrow$ Zerstreuungskreis (Kaustik)\\
+Koma
+Astigmatismus
+\subsubsection{Lagefehler}
+Bildfeldwölbung, Verzeichnung
+\subsubsection{Farbefehler/Chromatische Abberationen}
+Farblängsfehler, Farbquerfehler $\rightarrow$ Dispersion\\
+
+\subsection{Welleneigenschaft des Lichts}
+$W_{\text{Welle}} = W_{\text{el}}+W_{\text{magn}} = \frac{1}{2}\cdot\varepsilon_0\cdot E^2 + \frac{1}{2\mu_0}\cdot B^2$\\
+mit $E = \frac{1}{\sqrt{\mu_0\varepsilon_0}}\cdot B = c\cdot B \rightarrow W_{\text{Welle}} = \varepsilon_0E^2 = \frac{B^2}{\mu_0}$\\
+
+
+ 
+
+
+
+
 
 
 
