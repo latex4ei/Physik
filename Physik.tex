@@ -22,11 +22,21 @@
 	\\ Diese Formelsammlung ist noch in der Entwicklung und nicht prüfungstauglich ! \\ Allerdings würden wir uns über Unterstützung freuen das zu ändern. Wer Lust hat kann uns über das Kontaktformular auf www.latex4ei.de erreichen.
 	}
 % ===============================================================================================
-\section{Messgenauigkeit und Messfehler}
+\section{Physikalische Größen und Einheiten}
+%Kinematik; 
+%Dynamik für Punktmassen: Kräfte & Newtonsche Gesetze; 
+%Arbeit, Energie, Leistung
+%Stöße zwischen Punktmassen
+%Dynamik des starren Körpers
+
+
+%7 SI Basiseinheiten: Sekunde, Meter, Kilogramm, Ampere, Candela, Kelvin, Mol\\ Abgeleitete Einheiten
+\subsection{Messgenauigkeit und Messfehler}
 Systematischer Fehler: Abweichung einer Messung von ihrem Erwartungswert\\
 Statistischer Fehler: Entstehung durch zufällige positive bzw. negative Abweichungen\\
 Arithmetischer Mittelwert: $\ol x = \fr{1}{n}\sum_{i=1}^n x_i$\\
-Standartabweichung: $s = \sigma = \sqrt{\fr{1}{n-1}\sum_{i=1}^n (x_i-\ol x)^2}$\\
+Standardabweichung: $s = \sigma = \sqrt{\fr{1}{n-1}\sum_{i=1}^n (x_i-\ol x)^2}$\\
+%TODO Standardabweichung mit TR: $s_{\text{Rechner}} = \sqrt{\fr{\sum_{i=1}^n x_i^2(\sum_{i=1}^n)x_i}^2}{n-1}$\\
 Normalverteilung/Gauß-Funktion: $g(x) = \fr{1}{\sigma \sqrt{2\pi}\exp(-\fr{(x-\ol x)^2}{2\sigma^2})}$\\
 Näherungsweise gilt: 
 \begin{itemize}
@@ -35,11 +45,25 @@ Näherungsweise gilt:
 \item 99,8\% aller Messwerte haben eine Abweichung < $\pm 3\sigma$ vom Mittelwert.
 \end{itemize}
 %TODO Fehlerfortpflanzung
+%TODO Additionstheoreme
 
-\section{Konstanten}
+
+\subsection{Konstanten}
 $ \epsilon_0 = 8.85\cdot 10^{12} \fr{C^2}{Nm^2}$\\
 
-\section{Kinetik}
+\subsection{TABELLE TRIGONOMETRISCHE FUNKTIONEN}
+
+
+\section{Klassische Mechanik}
+%Kinematik
+%Dynamik für Punktmassen: Kräfte & Newtonsche Gesetze
+%Kräfte, Arbeit, Energie, Leistung
+%Stöße zwischen Punktmassen
+%Dynamik des starren Körpers
+
+
+
+\subsection{Kinetik}
 momentane Geschwindigkeit: $v = \dot r$\\
 mittlere Geschwindigkeit: $v_m = \fr{\Delta r}{\Delta t}$\\
 \subsection{Galilei Transformation}
@@ -79,7 +103,7 @@ Fall $m_1 = m_2, v_1 \neq 0, v_2 = 0$: $v_1' = 0, v_2' = v_1$\\
 $\v v_{\text{1,end}} = \frac{1}{m_1+m_2}{(m_1-m_2)\v v_{\text{1,anf}} + 2m_1\v v_{\text{2,anf}}}$\\
 
 
-\section{Kraft}
+\subsection{Kraft}
 %TODO Eventuell Newtonsche Gesetze, mt =/= const VL4
 Kräfte werden vektoriell addiert: $\v F_{ges} = \sum_{i=1}^n \v F_i$\\
 Gravitationskraft: $F_G = -G \fr{m_1m_2}{r_{12}^2}$, mit $G = 6,67\cdot 10^{-11} \fr{Nm^2}{kg}$\\
@@ -93,29 +117,29 @@ Luftwiderstand: $\v F_W = \frac{1}{2}\rho c_WAv^2$ mit $\rho$: Luftdichte\\
 
 %TODO Evtl subsection Scheinkräfte VL5
 
-\section{Arbeit}
+\subsection{Arbeit}
 Generell: $W = \int_{r_1}^{r_2} F dr$ bzw. $W = Fs\cos \alpha$\\
 Spannarbeit an einer Feder: $W = \fr{1}{2} k(x-x_a)^2 $\\
 
-\section{Energie}
+\subsection{Energie}
 potentielle Energie: $E_{pot} = mgh$\\
 kinetische Energie: $E_{kin} = \fr{1}{2}mv^2$\\
 \subsection{Energieerhaltung}
 Grundprinzip: $E_{vorher} = E_{nachher}$\\
 Gesamte Rotationsenergie: $E_{rot} = (\sum_{i=1}^N \fr{1}{2} \Delta m_ir_{i\perp}^2\omega ^2$\\
 
-\section{Leistung}
+\subsection{Leistung}
 $P = \dt W = \v F\v V = \dt E$\\
 
 
 
 %TODO Massenmittelpunkt VL8
 
-\section{Galilei-Transformation}
+\subsection{Galilei-Transformation}
 Transformation erleichtert Bezugssystem mit konstanter Geschwindigkeit
 $\rightarrow$ Berechnung im Schwerpunktsystem
 
-\section{Drehungen}
+\subsection{Drehungen}
 Drehmoment: $\v M = \v r \times \v F$\\
 Drehimpuls: $\v L = \v r \times \v p$\\
 %TODO \rightarrow \v L = mr^2 \v \omega \rightarrow \v L = J \v \omega $\\
@@ -133,25 +157,38 @@ Energieerhalt. rollender Zylinder: $E_{\text{pot}} = E_{\text{kin,translation}} 
 %TODO Tabelle Trägheitsmomente Demtröder VL9 S11
 %TODO evtl analogien Translation Rotation VL10
 
-\section{Planetenbewegung}
-1. Keplersches Gesetz: Planetenbahnen sind Ellipsen um Sonne in einem der beiden Brennpunkte\\
+\subsection{Planetenbewegung}
+1. Keplersches Gesetz: Planetenbahnen sind Ellipsen um Stern in einem der beiden Brennpunkte\\
 2. Keplersches Gesetz: In gleicher Zeit wird die gleiche Flaeche an einer Bahn aufgespannt\\$\frac{dA}{dt} = \frac{1}{2} \v r \v v sin \alpha = \frac{1}{2}\v r \times \v v = fr{1}{2m}|\v L| \Rightarrow$ Drehimpuls ist zeitlich konstant\\
-3. Keplersches Gesetz: $\frac{T_1^2}{T_2^2} = \frac{a_1^3}{a_2^3}$\\
+3. Keplersches Gesetz: $\frac{T_1^2}{T_2^2} = \frac{a_1^3}{a_2^3}$ mit T: Umlaufzeit, a: Große Halbachse\\
 %TODO evtl Spezialfall Kreisbahn
 
-\section{Schwingungen}
+
+
+
+
+\section{Wellenlehre und Optik}
+%Schwingungen
+%Wellen
+%Geometrische Optik
+%Lichtwellen
+%Laser
+
+\subsection{Schwingungen}
 \subsection{Harmonische Schwingungen} $x(t) = A \cos(\omega_0t + \Phi)$\\
 A = Amplitude; $\omega$ = Kreisfrequenz [rad/s]; f = Frequenz[1/s]; T = Schwingungsdauer 1/f; $\phi$ = Phasenkonstante;\\
+\subsubsection{Federpendel}
 $\omega ^2 = \frac{\text{Rücktreibende Kraft}}{\text{Einheitsmasse $\times$ Einheitsauslenkung}} = \frac{k}{m};	\omega = 2 \pi f \rightarrow f = \frac{1}{2\pi}\sqrt{\frac{k}{m}}$\\
 Energiebilanz: $E_{\text{ges}} = E_{\text{pot}} + E_{\text{kin}} = \frac{1}{2}kx^2+\frac{1}{2}mv^2$\\
-\subsection{Mathematisches Pendel} $F = -mg \sin \theta \approx -mg \theta$ %TODO : Bis 15$°:$ Fehler $<1%$\\
+\subsubsection{Mathematisches Pendel} $F = -mg \sin \theta \approx -mg \theta$ %TODO : Bis 15$°:$ Fehler $<1%$\\
 $x = l\theta ; F=-\frac{mg}{l}x$\\
 Hooke'sches Gesetz: Kraft proportional zur Auslenkung\\
-\subsection{Torsionsschwingungen}
+\subsubsection{Torsionsschwingungen}
 Elastisches Rückstelldrehmoment $M = -D\theta = J\alpha$\\
-$\alpha = \frac{d^2 \theta}{dt^2}; \frac{d^2\theta}{dt^2}+\frac{D}{J}\theta	= 0; \omega = \sqrt{\frac{D}{J}}$\\
-\subsection{Gedämpfter harmonischer Oszillator}
-Stoke'sche Reibungskraft: $F_R = -bv = -bx$\\
+mit Torsionskonstante D und $\alpha = \frac{d^2 \theta}{dt^2}$\\
+$\ddot{\theta}+\frac{D}{J}\theta = 0 \Rightarrow \omega = \sqrt{\frac{D}{J}}$\\
+\subsubsection{Gedämpfter harmonischer Oszillator}
+Stoke'sche Reibungskraft: $F_R = -bv = -b\dot{x}$\\
 Bewegungsgleichung: $\ddot{x} + 2\gamma \dot{x} + \omega_0^2x = 0$; mit 2$\gamma$ = $\frac{b}{m}$\\
 Lösungsansatz mit Cosinus: $x = Ae^{-\gamma t} \cos(\omega 't)$ \\mit $\omega ' = \sqrt{\omega_0^2-\gamma^2}$\\
 schwache Dämpfung: $x = Ae^{-\gamma \frac{-t}{t_L}} \cos(\omega 't); \gamma = \frac{b}{2m}; \omega_0 = \sqrt{\frac{k}{m}}$\\
@@ -161,67 +198,66 @@ $t_L$ = mittlere Lebensdauer, Zeit auf 1/e der Amplitude\\
 \\Überlagerung von Schwingungen: $x(t)=\sum_nx_n(t)=\sum_na_n\cos{\omega_nt+\delta_n}$\\
 %TODO evtl Log Dekrement VL 11, mehr zu Diffgl und erzw Schwing
 
-\section{Hydromechanik}
-ideale Gasgleichung: $ \fr{\rho _0}{P_0} = \fr{M}{RT}$\\
-Luftdruck:
-
-\section{Wellen}
-Polarisation in Materie: $\v P = \chi_e\varepsilon_0\v E$ $\chi_e:$ Elektrische Suszeptibilität, Materialeigenschaft, allg komplex\\
+\subsection{Wellen}
+Polarisation in Materie: $\v P = \chi_e\varepsilon_0\v E$, mit $\chi_e:$ Elektrische Suszeptibilität, Materialeigenschaft, allg komplex\\
 Longitudinale Welle: Auslenkung in Ausbreitungsrichtung\\
 Transversale Welle: Auslenkung normal zur Ausbreitungsrichtung\\
-Geschwindigkeit Seilwelle: $v = \sqrt{\frac{F_T}{\mu}}$\\ %TODO evtl S11 VL11 mit Bild
+Geschwindigkeit Seilwelle: $\nu = \sqrt{\frac{F_T}{\mu}}$\\ 
+$F_T$ = Zugspannung, $\mu$ spezifische Masse\\ %TODO evtl S11 VL11 mit Bild
 %TODO Formeln Geschwindigkeit VL11
+%TODO VL12 S12 oben
+Masse $m = \mu\cdot vt \rightarrow \mu = \frac{m}{vt}$\\
 Elastizitätsmodul: $E = \frac{F / A}{\Delta l / l}$\\
 Kompressionsmodul: $K = \frac{-p}{\Delta V / V}$\\
-Ausbreitungsgeschwindigkeit Transversaal $v = \sqrt{\frac{F}{\mu}}$\\
-Ausbreitungsgeschwindigkeit Longitudinal $v_\text{l} = \sqrt{\frac{E}{\rho}}$\\
-Ausbreitungsgeschwindigkeit in Gasen: $v_\text{l,Gas} =  = \sqrt{\frac{K}{\rho}}$\\
+Ausbreitungsgeschwindigkeit Transversaal $\nu = \sqrt{\frac{F}{\mu}}$\\
+Ausbreitungsgeschwindigkeit Longitudinal $\nu_\text{l} = \sqrt{\frac{E}{\rho}}$\\
+Ausbreitungsgeschwindigkeit in Gasen: $\nu_\text{l,Gas} = \sqrt{\frac{K}{\rho}}$\\
 Schwingungsenergie des Teilchens: $E = \frac{1}{2}kD_M^2$\\
 $k = 4\pi ^2mf^2; E = 2\pi^2mf^2D_M^2$\\
-$m = \rho V = \rho A v t; \Delta E = \Delta E = 2\pi^2 \rho A v \Delta tf^2D_M^2$\\
-%TODO v durch kappa oder was auch immer ersetzen
-Durchschnittliche Leistung: $P (Strich) = fr{\Delta E}{\Delta t} = 2\pi ^2 \rho a v f^2 D_M^2$\\
-
-Intensität: $ I = \fr{P (Strich)}{A} = 2\pi^2\rho v f^2D_M^2$\\
-Intensität sphärische Welle: $I = \frac{P (dach)}{r\pi r^2}$\\
+$m = \rho V = \rho A v t; \Delta E = 2\pi^2 \rho A v \Delta tf^2D_M^2$\\
+Durchschnittliche Leistung: $\ol{P} = fr{\Delta E}{\Delta t} = 2\pi ^2 \rho a v f^2 D_M^2$\\
+%TODO Overline oben definieren und stattdessen mean, RMS; Dach als peak definieren, etc
+Intensität: $ I = \fr{\ol{P}}{A} = 2\pi^2\rho v f^2D_M^2$\\
+Intensität sphärische Welle: $I = \frac{\hat{P}}{r\pi r^2}$\\
 $D_M \propto \frac{1}{r}$\\
 %TODO Mathematische Beschreibung der Wellenausbreitung, Wellengleichung VL12
-Schallpegel = $L = 10\log{\frac{I}{I_0}}$ mit $I_0 = 10^{-12}\frac{W}{m^2}$\\
-Einheit db: 1 Bel = 10db\\
+Schallpegel $L = 10\log{\frac{I}{I_0}}$dB mit $I_0 = 10^{-12}\frac{W}{m^2}$, 1dB = 10Bel\\
 %TODO evtl Schallpegeltabelle
 %TODO Superpositionsprinzip VL13
 \\
-Reflexion bei elektrischen Leitungen: $ r = \frac{Z_L-Z_0}{Z_L+Z_0}$\\
+Reflexion bei elektrischen Leitungen: $ r = \frac{Z_L-Z_0}{Z_L+Z_0}$ mit Impedanz Z\\
 %TODO subsection Interferenz VL13, Überlagerung von Wellen unterschiedlicher Frequenz
 
 \subsection{Geometrische Optik}
 $f\cdot\lambda = c$\\
-$c_0=2,99792458\cdot 10^8 \frac{m}{s} = \frac{1}{srt{\epsilon_0 \mu_0}}$\\
+$c_0=2,99792458\cdot 10^8 \frac{m}{s} = \frac{1}{\sqrt{\epsilon_0 \mu_0}}$\\
 %TODO was ist Licht?
-Energie Photonen: $h\cdot v$ mit $h=6.626\cdot10^{-34}\frac{J}{s}$\\
+Energie Photonen: $h\cdot c$ mit Plank'schem Wirkungsquantum $h=6.626\cdot10^{-34}\frac{J}{s}$\\
 Brechungsindex $n = \frac{c}{v}$\\
 Dielektrizitätskonstante $\varepsilon = n^2 $\\
  Brechungsgesetz von Snellius: $\frac{\sin\theta_1}{\sin\theta_2} = \frac{v_1}{v_2}  = \frac{c/n_1}{c/n_2} = \frac{n_2}{n_1}$\\
-Snellius'sche Gesetz für bestimmte Winkel: $n_1\sin\theta 1 = n_2\sin\theta 2$\\
+Snellius'sche Gesetz für bestimmte Winkel: $n_1\sin\theta_1 = n_2\sin\theta_2$\\
 Licht bricht immer zum Medium mit dem höheren Index hin\\
 Fermatsches Prinzip:\\
 Licht folgt dem Weg mit der kürzesten Laufzeit$: \frac{dt}{dx} = 0$\\
 %TODO evtl Fata Morgana
-Optische Wand, parallelverschiebung um $\Delta d: d = t\cdot\sin(\alpha)\cdot[1-\frac{\cos(\alpha}{\sqrt{n^2-sin^2(\alpha}}]$\\ %TODO große Klammer
+Optische Wand, parallelverschiebung um $\Delta d:$\\$d = t\cdot\sin(\alpha)\cdot\left[-\frac{\cos\alpha}{\sqrt{n^2- \sin ^2(\alpha}}\right]$\\
 Totalreflexion: falls $\theta>\theta_g$: $\sin(\theta_g) = \frac{n2}{n1}$\\
+%TODO Besser
+
 %TODO evtl Propagationsverluste in der Glasfaser oder was auch immer
 %TODO Bild vom Prisma einfügen VL15 S20
-\\Brechungsindex n ist frequenzabhängig $n = n(\omega)$\\
+Brechungsindex n ist frequenzabhängig $n = n(\omega)$\\
 Dispersion: $v(\omega)$\\
-Maxwell Relation: $n = \sqrt{\varepsilon_r} = \sqrt{1+\chi_E}$\\
+Maxwell Relation: $n = \sqrt{\varepsilon_r} = \sqrt{1+\chi_E}$\\ %Not sure
 Elektrische Suszeptibilität: $\v P = N \cdot \v p$\\% %TODO war das nicht schon oben? N im text
 %TODO Bewegungsgleichung erzwungene Schwingung VL16 S7
 $x_0 = \frac{eE_0}{m(\omega_0^2-\omega^2}$\\
 $\omega < \omega_0$: Auslenkung in Phase,
 $\omega > \omega_0$: Auslenkung gegen Phase $F_{el}$\\
-Dipolmoment: $|\v p(t)| = e\cdot x(t) = | \frac{e^2E_0\cdot sin(\omega t)}{m(\omega_0^2-}\omega^2|$\\ %TODO große Betragsstriche
+Dipolmoment: $|\v p(t)| = e\cdot x(t) = \left|\frac{e^2E_0\cdot sin(\omega t)}{m(\omega_0^2-}\omega^2\right|$\\ %TODO große Betragsstriche
 $\chi _e(\omega) = \frac{Ne^2}{\varepsilon_0(\omega_0^2 - \omega^2)}$\\
-Sellmeier Gleichung: $n^2(\lambda) = 1 + \frac{B_1\lambda^2}{\lambda^2-C_1}\frac{B_2\lambda^2}{\lambda^2-C_2}\frac{B_2\lambda^2}{\lambda^2-C_2}$\\ mit $B_i und C_i (i \in 1-3)$ Sellmeier Koeffizienten, experimentell ermittelt\\
+Sellmeier Gleichung: $n^2(\lambda) = 1 + \frac{B_1\lambda^2}{\lambda^2-C_1}\frac{B_2\lambda^2}{\lambda^2-C_2}\frac{B_3\lambda^2}{\lambda^2-C_3}$\\ mit $B_i$ und $C_i$ (i $\in$ 1-3) Sellmeier Koeffizienten, experimentell ermittelt\\
 Anormale Dispersion: n steigt mit $\lambda$\\
 Normale Dispersion: n fällt mit $\lambda$\\
 \subsection{Abbildung}
@@ -236,24 +272,30 @@ Abbildungsmaßstab $V = \frac{B}{G}=\frac{-b}{g}$ mit V negativ: Bild umgekehrt\
 Linsengleichung:
 Gegenstandseite: $\frac{f}{g} = \frac{B}{B+G}$
 Bildseite: $\frac{f}{b}= \frac{G}{G+B}$\\
-Dünne vs dicke Linsen
+Dünne vs dicke Linsen\\ %TODO
 Reziproke Brennweite = Brechkraft $\rightarrow$ Einheit Dioptrie [D]= 1dpt = $\frac{1}{m}$\\
 $g>f$: Reelles Bild;
 $g<f$: Virtuelles Bild\\
 Berechnung Brennweite: $\frac{1}{f}=(n-1)(\frac{1}{r_1}-\frac{1}{r_2})$\\
-
-\subsubsection{Le Auge}
-Weitsichtigkeit: Bild naher Gegenstände hinter Netzhaut $\rightarrow$ Korrketure durch Sammelkeslinse\\
-Kurzischtigkeit: Bild weiter Gegenstandesr vor Netrtzthauuta $\rightarrow$Korrektur durch Zerstreuungslinse\\
-Stabsichtige Auge (AstigmaAutismus): abnormale Hornhautverkrümmung $\rightarrow$Korrektur durch Zylinderlinsen\\
+mit n = Brechungsindex der Linse, r Radizen
+\\SKIZZE HIER SKIZZE HIER
+%TODO SKIZZE
+\subsubsection{Auge}
+Weitsichtigkeit: Bild naher Gegenstände hinter Netzhaut\\
+$\rightarrow$ Korrketur durch Sammelkeslinse\\
+Kurzischtigkeit: Bild weiter Gegenstände vor Netzhaut\\
+$\rightarrow$Korrektur durch Zerstreuungslinse\\
+Stabsichtige Auge (Astigmatismus): abnormale Hornhautverkrümmung $\rightarrow$Korrektur durch Zylinderlinsen\\
 \\Sehwinkel/räumliche Auflösung des Auges: $\varepsilon_0^{min} \approx 1" \Rightarrow \Delta x_{\text{min}} = S_0\cdot\varepsilon_o^{min} \approx 70 \mu m$\\
 %TODO Die Lupe, Das Fernrohr VL17
 Mikroskop: $V_{\text{Mikroskop}} = \frac{(l-f_e)\cdot L_d}{d_0\cdot f_e} = \beta_{\text{Objektiv}}\cdot V_{\text{Okular}}$\\
-Vergrößerung Okular: $V_{\text{Okular}} = \frac{L_d}{F_e}$ $L_d$ = deutliche Sehweite des Mensche, ca 250mm\\
+Vergrößerung Okular: $V_{\text{Okular}} = \frac{L_d}{F_e}$\\
+$L_d$ = deutliche Sehweite des Mensche, ca 250mm\\
 Auflösungsgrenze bei ca 1000-facher Vergrößerung\\
 %TODO Dicke Linsen S16 VL 17, Fresnel Linse
 
-\subsection{Abbildungsfehler (Abberationen} %TODO ausarbeiten VL17,evtl mit Bildern
+\subsection{Abbildungsfehler (Abberationen)} %TODO ausarbeiten VL17,evtl mit Bildern
+ausarbeiten VL17,evtl mit Bildern
 \subsubsection{Schärfefehler}
 Sphärische Abberationen: Groößerer EInfallswinkel am Rand $\rightarrow$ Zerstreuungskreis (Kaustik)\\
 Koma
@@ -266,17 +308,229 @@ Farblängsfehler, Farbquerfehler $\rightarrow$ Dispersion\\
 \subsection{Welleneigenschaft des Lichts}
 $W_{\text{Welle}} = W_{\text{el}}+W_{\text{magn}} = \frac{1}{2}\cdot\varepsilon_0\cdot E^2 + \frac{1}{2\mu_0}\cdot B^2$\\
 mit $E = \frac{1}{\sqrt{\mu_0\varepsilon_0}}\cdot B = c\cdot B \rightarrow W_{\text{Welle}} = \varepsilon_0E^2 = \frac{B^2}{\mu_0}$\\
+Permittivität $\varepsilon$: Gibt Durchlässigkeit eines Materials für elektrische Felder an\\
+magnetische Permittivität (magn Leitfähigkeit) $\mu$: Gibt Durchlässigkeit von Materie für magnetische Felder\\
+$\varepsilon = \varepsilon_r\varepsilon_0; \mu = \mu_r\mu_0$\\
+
+Welleneigenschaften: 
+Pointingvektor $\v S=\frac{1}{\mu_0}\cdot \v E \times \v B = \v E \times \v H$ \\
+zeigt in Ausbreitungsrichtung, Betrag = Intensität der Strahlung\\
+Intensität S = Energiedichte $\times$ Ausbreitungsgeschwindigkeit\\
+$[S]  = \frac{W}{m^2}$\\
+Lichtwellen sind transversale e-m-Wellen mit $\v E\perp \v B \perp\v k$, mit $\v k \parallel$ Achse\\
+$\v E = \v E_0\cdot\cos(k\cdot z - \omega\cdot t - \Phi) = \v E_0\cdot \cos(\frac{2\pi}{\lambda}(z-c\cdot t)-\Phi)$\\
+$\v B$ ist direkt mit $\v E$ verknüpft\\
+Kohärenz = Gleiche Frequenz, Feste Phasendifferenz\\
+Meiste Lichtquellen inkohärent, Ausnahme Laser\\
+Bei inkohärentem Licht mittelt sich die Interferenz zu null\\
+Leistung eines Dipols (max $10^{-10}$m): $P = \frac{2}{3}\cdot\frac{e^2\cdot\omega^4\cdot d^2}{4\pi\varepsilon_0\cdot c^3}$\\
+mit $\omega^2\cdot d = a \equiv$ Beschleunigung bei zirkularer Frequenz $\omega$\\ 
+Lebensdauer atomare Schwingung: 1ns bis 10ns\\
+Kohärenzlänge (Wegstrecke in 1ns): 30cm\\
+%TODO evtl Fresnel'scher Doppelspiegel, Interferometer, Entspiegelung, Newtonsche Ringe
+Fabry-Perot-Interferometer: Wellenlängenauflösung: $\frac{\Delta \lambda}{\lambda} = \frac{n}{N}$\\
+Huygens-Fresnel-Prinzip: jeder Raumpunkt ist Ausgangspunkt für eine neue Kugelwelle (Elementarwelle)\\
+
+\subsubsection{Beugung am Einfachspalt}
+Bedingung für Minima: $a\cdot\sin\theta = Z\cdot\lambda$, mit Z $\in 0,1,2,...$\\ %TODO besser
+Bedingung für Maxima: $a\cdot\sin\theta = (Z+\frac{1}{2})\cdot\lambda$, mit Z $\in 0,1,2,...$\\%TODO
+\subsubsection{Beugung am Doppelspalt}
+Gangunterschied $\Delta = q\cdot\sin\alpha$\\
+Konstruktive Interferenz für Richtungen mit: $\Delta = Z \cdot \omega$\\
+Destruktive Interferenz für Richtungen mit: $\Delta = (Z+\frac{1}{2})\omega$\\
+%TODO Strichgitter, Kreuzgittertier VL19
+%TODO evtl Fresnelsche Zonenplatte
+\subsection{Mikroskop}
+Auflösugnsvermögen Mikroskop mit Spalt b: $\Psi_{\text{min}} = \alpha = \arcsin\frac{\lambda}{b} \approx \frac{\lambda}{b}$ (Abbé Limit)\\
+für runde Linse mit Durchmesser D: $D\cdot\sin\alpha = 1,22\frac{\lambda}{D}$; $\Psi_{\text{min}} = 1,22\frac{\lambda}{D}$\\
+\subsubsection{Röntgenbeugung}
+Bragg-Bedingung konstruktive Interferenz: $m\lambda = 2d\sin\theta$\\
+\subsubsection{Polarisation von Licht}
+e-m-Welle ist transversaal, also $\v E \perp \v k$ bzw $\v B\perp\v k$\\
+linear polarisiert $\rightarrow$ E-Feld steht nur in eine Richtung\\
+Richtung von $\v E$ ist die Polarisationsrichtung\\
+von k,E aufgespannte Ebene: Polarisatonsebene\\
+Emmissionsakt eines einzelnen Atoms i.d.R. polarisiert, ungeregelte Überlagerung $\rightarrow$ unpolarisiert\\
+Zwei Polarisationen:
+S (Senkrecht) oder P (Parallel) zur Einfallsebene\\
+Einfallsebene: $\v k$ und $n$(dach) spannen Ebene auf\\
+Polarisation muss gleich sein für Interferenz\\
+linear, elliptisch und zirkular möglich\\
+Superposition mehrerer ist möglich\\
+$I' = I\cdot\cos ^2\alpha$\\
 
 
- 
+
+
+
+\section{Hydromechanik}
+%Flüssigkeiten und Gase:
+%Dichte
+%Druck
+%Oberflächenspannung
+
+%Strömende Flüssigkeiten:
+%Strömungen
+%Reale Flüssigkeiten: Viskosität
+%Strömung einer viskosen Flüssigkeit durch  ein Rohr
+
+
+Dichte $\rho = \frac{m}{v}$\\
+%TODO Dichte Süßwasser $ \approx \rho (T) = \rho_{\text{max}} -7 \cdot 10^{-3}(T-4)^2 $, T in °C\\
+Normalkraft $\v F_N$: $\rho = \frac{F_N}{A}$\\
+Schweredruck: $p_s = \rho_{\text{Fl}}\cdot h\cdot g$\\
+%TODO Formel hydraulischer Lift? VL19
+Kompressibilität $\kappa = -\frac{1}{p}\cdot \frac{\Delta V}{V} \rightarrow \frac{\delta V}{V}=-\kappa\cdot \delta p$\\
+Kompressionsmodul K = $\frac{1}{\kappa}$\\
+Schallgeschwindigkeit in Flüssigkeit: $v_0 = \sqrt{\frac{dp}{d\rho}} = \sqrt{\frac{1}{\rho\kappa}}$\\
+Gewicht pro Volumen $\gamma = \rho g$ [N/$m^3$]\\
+$\gamma_{\text{Wasser}} = 998\frac{kg}{m^3}\cdot 9.807\frac{m}{s^2} = 9790 \frac{N}{m^2}$\\
+%TODO evtl Tabelle Dichten und Schallgeschwindigkeiten
+Auftriebskraft: $F_A = \rho_{\text{Fl}}\cdot g\cdot V_K$ mit Volumen $V_K$\\
+$V_{\text{Verdrängt }} = \frac{\rho_K}{\rho_{Fl}}\cdot V_K$; Einsinken bis $m_v = m_k$\\
+$\rho_k < \rho_{Fl}$: Körper schwimmt\\
+$\rho_k = \rho_{Fl}$: Körper schwebt\\
+$\rho_k > \rho_{Fl}$: Körper sinkt\\
+\\
+Oberflächenspannung $\gamma = \sigma = \frac{F}{L} = \frac{dE}{dA}$ (Beide Buchstaben üblich\\
+$\sigma_{\text{Wasser}} =$ 0.073 N/m\\
+Kapillarspannung: $p_{\text{kap}} = \sigma(\frac{1}{r_21}+\frac{1}{r_2})$\\
+kreisrunde Kapillare: $p_{\text{kap}} = \frac{2\sigma}{r}\cos (\phi) \Leftrightarrow p_S = \rho\cdot g\cdot h_{\text{kap}}$\\
+%TODO Steighöhe $h_{\text{kap}} = \frac{2\sigma}{\rho gr}\cos(\phi}$\\
+%TODO Bild benetzend oder nicht
+
+\subsection{Strömungen}
+laminare Ströumng: kleine Geschwindigkeiten, große innere Reibung, geringe Reibung mit Wänden\\
+turbulente Strömung: große Geschwindigkeiten, geringe innere Reibung, hohe Reibung mit Wänden\\
+Kontinuitätsgleichung für inkompressible Flüssigkeit: $A_1\cdot V_1 = A_2\cdot V_2$\\
+Volumenstrom $V(Punkt) = \frac{dV}{dt} = A\cdot V$ ist konstant\\
+%TODO evtl mit Masse des Volumenelements
+Bernoulligleichung:\\
+%TODO Hydrodynamisches Paradoxon
+
+ideale Gasgleichung: $ \fr{\rho _0}{P_0} = \fr{M}{RT}$\\
+Luftdruck: TODO
+
+Viskosität: Lineares Geschwindigkeitsprofil: $F = \eta\cdot A\cdot\frac{v}{z}$ mit z = Abstand\\
+Viskosität $\eta$ ist stark Temperaturabhängig\\
+
+Strömung einer viskosen Flüssigkeit durch ein Rohr: $v(r) = \frac{p_1-p_2}{4\cdot\eta\cdot l}\cdot(R^2-r^2)$ Geschwindigkeit steigt parabelförmig zur Mitte hin an\\
+Volumenstrom $ \dot V = \frac{\pi\cdot (p_1-p_2)}{2\cdot\eta\cdot l}\cdot\lfloor R^2\int_0^R r\cdot dr - \int_0^Rr^3\cdot dr\rfloor \frac{\pi\cdot(p_1-p_2)}{2\cdot\eta\cdot l}\cdot \lfloor \frac{R^4}{2}-\frac{R^4}{4}\rfloor $\\
+$\rightarrow$ Gesetz von Hagen-Poiseuille: $\dot V  = \frac{\pi\cdot(p_1-p_2)}{8\cdot\eta\cdot l}\cdot R^4$\\
+Reynolds Zahl: $R_e = \frac{v\cdot\rho\cdot L}{\eta}$ mit L = Charakteristische Länge/Durchmesser des Körpers:\\ 1) für $R_e >> 1$: Newtonsches Reibungsgesetz $F = c_W \cdot A\\cdot \frac{\rho\cdot v^2}{2}$ 2) für $R_e < 1$: Stokessches Reibungsgesetz $F = b\cdot v$\\
+Rein laminare Strömung bei $R_e \leq 0.1$\\
 
 
 
 
 
+\section{Thermodynamik}
+
+Mensch Sepp, beeil dich mit deiner Vorlesung
 
 
-	
+Vielteilchensysteme $\rightarrow$ Mittelung\\
+
+Wärmemenge Q bei Erwärmung: $Q = C_p\cdot (T_2 - T_1)$ mit $C_p =$ Wärmekapazität in $\frac{J}{K}$\\
+Gaskonstante: $R = C_{\text{p(mol)}} - C_{\text{v(mol)}}$ bzw. $\nu R = C_p - C_p$\\
+spezifische Wärmekapazität $c = \frac{C}{m} = \frac{\Delta Q}{\Delta T\cdot m}$ mit Wärmezufuhr $\Delta Q$, $\Delta T$ Temperaturerhöhung, $m$ Masse des Körpers\\
+Wärmekapazität bei konstantem Druck (ideales Gas): $pV = \nu RT$\\
+
+Zustandsgleichung des idealen Gases: $\rho\cdot V  = \nu\cdot R\cdot T = N\cdot k_B\cdot T$ mit $\nu$ Anzahl der Moleküle, R = 8.314 $\frac{J}{mol\cdot K}$, N Anzahl der Gasatome, $k_B = \frac{R}{N_{\text{Av}}} = 1.381\cdot 10^{-23}$ Boltzmannkonstante\\
+\\Kinetische Gastheorie $pV = Nm\langle v_z^2 \rangle$\\
+%TODO evtl VL 21 S6 oben
+mittlere $E_{\text{text}}$ der Teilchen eines idealen Gases $\bar{E}_{\text{kin}} = \frac{3}{2}k_B T$\\
+Gesamnte Translationsenergie eines idealen Gases: $\frac{3}{2}\frac{RT}{Mol}$\\
+
+\subsection{Hauptsätze der Thermondynamik}
+TODO LISTE
+
+0. 2 Körper im thermischen Gleichgewicht zu einem dritten $\rightarrow$ Alle stehen untereinander im Gleichgewicht\\
+1. $\Delta U = \Delta Q + \Delta W \rightarrow $ Es gibt kein Perpetuum mobile erster Art - Maschine mit $>$100$ $%$ Wirkungsgrad\\
+Verschiedene Möglichkeiten für Zustandsänderung:\\
+a) Isobarer Prozess, $p =$ const. $\rightarrow$ im idealen Gas ist $C_p$ konstant $\Rightarrow Q_{12} = C_p \Delta T$\\
+b) Isochorer Prozess: $V =$ const. $\rightarrow$ im idealen Gas ist $C_v$ konstant $\Rightarrow Q_{12} = \Delta U$\\
+c) Isotherme Prozesse: $T =$ const. $\Rightarrow$ $W_{12} = -Q_{12}$ Umsetzung der Wärmezufuhr in Arbeit $\Rightarrow W_{12} = \nu RT \ln\frac{V_1}{V_2}$, Freiwerdende Wärme: $Q_{12} = -W_{12}$\\
+d) Adiabatische Prozesse: $\Delta Q = 0$
+%TODO Isochorer Prozess, Isothermer Prozess, adiabatischer Prozess
+
+In differentieller Schreibweise: $\delta U = \delta W + \delta Q $\\
+2.Thermische Energie ist nicht in beliebigem Maße in andere Energiearten umwandelbar
+\\TODO rauslöschen
+
+
+
+
+%TODO Formeln mit $\propto$
+
+%TODO evtl VL22 S9 unten
+
+%TODO INHALTSVERZEICHNIS: Grundlagen; Das ideale Gas; Zustandsänderungen: Hauptsätze der Thermodynamik; reversible und irreversible Prozesse, Entropie; thermodynamische Maschinen
+
+
+%TODO Adiabatengleichung
+\subsection{Zustandsänderungen: Hauptsätze der Thermodynamik II}
+Adiabatengleichung $p\cdot V^\kappa =$ const\\
+
+Carnotscher Kreisprozess: \\
+Wirkungsgrad $\eta = \frac{\vert W\vert}{Q_{12}}$, $\eta_{\text{Carnot}} = \frac{\vert -\nu R(T_2-T_1)\cdot\ln(V_2/V_1)\vert}{\nu RT_2\cdot\ln(\frac{V_2}{V_1}} = \frac{T_2-T_1}{T_2} < 1$\\
+
+
+
+\subsection{Zustandsänderungen, Thermodynamische Systeme}
+
+
+\subsection{Reversible und irreversible Prozesse}
+Reversibler Prozess: z.B. Carnot- oder Stirling- Motor\\
+Irreversibler Prozess $\eta{\text{irreversibel}} < \eta{\text{Carnot}}$\\
+
+Entropie S: $\delta S = \frac{dQ_{\text{rev}}}{T} = \Delta S = \int \frac{dQ_{\text{rev}}}{T}$\\
+Für ideales Gas: $\Delta S = n\cdot C_v\cdot\ln\frac{T_2}{T_1} + n\cdot R\cdot\ln\frac{V_2}{V_1}$\\
+Nernst'sches Theorem: $\lim_{T \rightarrow 0} S(T) = 0$\\ d.h. Entropie am Temperaturnullpunkt ist 0\\
+\\
+Das reale Gas:\\
+1. Endliche Ausdehnung der Moleküle: $V_{\text{real}} = V_{\text{ideal}} + nb$ mit b= Eigenvolumen von 1 Mol\\
+2. Anziehung: van-der-Waals-Kraft: $p_{\text{real}} = p_{\text{ideal}} - a(\frac{n}{V^2} \rightarrow$ Druckreduktion\\
+mit Materialkonstante a, welche die vdW-Kräfte berücksichtigt\\
+
+Modifizierte Gasgleichung: $(p+a\frac{n^2}{V^2})\cdot(V-nb) = n\cdot R\cdot T$\\
+\\
+Wärmeleitung: $\dot Q = \frac{dQ}{dt} = - \lambda  A \frac{dT}{dx}$\\
+
+
+
+\section{Quantenmechanik}
+%Welle-Teilchen-Dualismus
+%Wellenfunktion
+%Unschärferelation
+%Schrödingergleichung
+%Lösung der Schrödingergleichung für verschiedene Potentiale
+
+
+Es ist kaum noch Zeit, wie sollen wir das in ein paar Tagen schaffen?
+
+Wärmestrahlung: Gesetz von Stefan und Boltzmann: 
+Strahlungsleistung Schwarzkörper $P_s$ eines schwarzen Körpers = $ P_S = \sigma\cdot A\cdot T^4 $\\
+Stefan-Boltzmann-Konstante: $\sigma = 5.670 \cdot 10^{-8}\frac{W}{m^2\cdot K^4}$\\
+effektiv abgestrahlte Leistung: $\Delta P_s = \sigma\cdot A (T_1^4-T_2^4)$\\
+
+Für nichtideale Körper $\Delta P_s = \varepsilon\sigma\cdot A (T_1^4-T_2^4)$\\
+Wien'scher Verschiebungssatz: $\lambda_{max} = \frac{2897,8\mu\cdot K}{T}$\\
+
+\subsection{Welle-Teilchen-Dualismus}
+Der Photoeffekt: Metallplatte entlädt sich durch Beleuchtung mit kurzwelligem Licht\\
+%TODO VL23 S18
+Energie eines Photons: $E_{ph} = h\cdot f$ mit f = Frequenz des Lichts, h = Plank'sches Wirkungsquantum = $6.626\cdot 10^{-34}Js = 4.136\cdot 10^{-15}eVs$\\
+Teilchen haben Welleneigenschaften\\
+de Broglie-Wellenlänge $p = \frac{h}{\lambda} \Rightarrow \lambda = \frac{h}{p}$\\
+Materialwellen: $\hbar = \frac{h}{2\pi} \Rightarrow p = \hbar 2\pi \frac{1}{\lambda}$\\
+aus der Wellenmechanik: $2\pi\frac{1}{\lambda} = k \rightarrow \v p = \hbar \v k$\\
+Impuls des Teilchens wird mit der Wellenzahl verknüpft\\
+
+FALLS ES IHNEN NOCH NICHT AUFGEFALLEN IST, DIESE FORMELSAMMLUNG IST NOCH ECHT SCHEIẞE\\
+ALARM ALARM NICHT FINAL
+
+
 \end{multicols*}
 \end{document}
 
