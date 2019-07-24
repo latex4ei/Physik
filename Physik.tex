@@ -56,9 +56,8 @@ Näherungsweise gilt:
 $ \epsilon_0 = 8.85\cdot 10^{12} \fr{C^2}{Nm^2}$\\
 $ c_0 = 299 792 458 \frac{m}{s} \approx 3\cdot 10^8 \frac{m}{s}$\\
 Boltzmannkonstante $k_B = \frac{R}{N_{Av}} = 1.381\cdot 10^{-23}$\\
-Plank'sches Wirkungsquantum h $= 6.626\cdot 10^{-34}Js = 4.136\cdot 10^{-15}eVs$
-
-
+Plank'sches Wirkungsquantum h $= 6.626\cdot 10^{-34}Js = 4.136\cdot 10^{-15}eVs$\\
+Gaskonstante $R = C_{\text{p(mol)}} - C_{\text{v(mol)}} = 8.314 \frac{J}{mol\cdot K}$\\
 
 %TODO Fehlerfortpflanzung EHER NICHT %TODO
 %TODO Additionstheoreme EHER NICHT %TODO
@@ -133,7 +132,7 @@ Reibung: Körper steht, falls $F_{\text{Haft}} = F_{\text{Hang}}$\\
 kritischer Neigungswinkel: $tan \alpha = \mu_h$\\
 \subsubsection{Kreisbewegung}
 Winkel $\phi = \fr{s}{r}$, 	Bogenlänge $s$, Radius $r$, Umlaufdauer $T$\\
-Kreisfrequenz $\omega = \dt \phi =\fr{2\pi}{f}$,	Frequenz $f$\\
+Kreisfrequenz $\omega = \dt \phi = \fr{2\pi}{T} = 2\pi f$, mit	Frequenz $f$\\
 Krummlinige Bewegung: $\ \v a = \dt {\v v} = \v a_t + \v a_{zp}$,	Tangetialbeschl. $a_t$\\
 
 \subsection{Kräfte, Arbeit, Energie, Leistung}
@@ -141,7 +140,7 @@ Krummlinige Bewegung: $\ \v a = \dt {\v v} = \v a_t + \v a_{zp}$,	Tangetialbesch
 Für $m_t \neq$ const: $\v F = m_t\frac{d}{dt}\v v +\v v\frac{d}{dt},_t$\\ %TODO DRINNEN LASSEN ODER RAUS NEHMEN? %TODO
 Kräfte werden vektoriell addiert: $\v F_{ges} = \sum_{i=1}^n \v F_i$\\
 Gravitationskraft: $F_G = -G \fr{m_1m_2}{r_{12}^2}$, mit $G = 6,67\cdot 10^{-11} \fr{Nm^2}{kg}$\\
-Zentripetalkraft: $F_Z = m \fr{v^2}{r} = m\omega r$\\
+Zentripetalkraft: $F_Z = m \fr{v^2}{r} = m\omega^2 r$\\
 Federkraft (Hooke'sches Gesetz): $\v F_F = -k\v x$\\
 mittlere Kraft: $\abs{<\v F>} = \abs{\fr{\Delta p}{\Delta t}} = \abs{\fr{m(v_E - v_A)}{\Delta t}}$\\
 Coulombkraft: $F = \fr{1}{4 \pi \epsilon_0}\fr{Q_1Q_2}{r^2}$\\
@@ -333,7 +332,7 @@ Reziproke Brennweite = Brechkraft $\rightarrow$ Einheit Dioptrie [D]= 1dpt = $\f
 $g>f$: Reelles Bild;
 $g<f$: Virtuelles Bild\\
 Berechnung Brennweite: $\frac{1}{f}=(n-1)(\frac{1}{r_1}-\frac{1}{r_2})$\\
-mit n = Brechungsindex der Linse, r Radizen
+mit n = Brechungsindex der Linse, r Radien
 %\\SKIZZE HIER SKIZZE HIER
 %TODO SKIZZE
 \subsubsection{Auge}
@@ -390,19 +389,19 @@ Fabry-Perot-Interferometer: Wellenlängenauflösung: $\frac{\Delta \lambda}{\lam
 Huygens-Fresnel-Prinzip: jeder Raumpunkt ist Ausgangspunkt für eine neue Kugelwelle (Elementarwelle)\\
 
 \subsubsection{Beugung am Einfachspalt}
-Bedingung für Minima: $a\cdot\sin\theta = Z\cdot\lambda$, mit Z $\in 0,1,2,...$\\ %TODO besser
-Bedingung für Maxima: $a\cdot\sin\theta = (Z+\frac{1}{2})\cdot\lambda$, mit Z $\in 0,1,2,...$\\%TODO
+Bedingung für Minima: $a\cdot\sin\theta = Z\cdot\lambda$, mit Z $\in 1,2,3,...$\\ %TODO besser
+Bedingung für Maxima: $a\cdot\sin\theta = (Z+\frac{1}{2})\cdot\lambda$, mit Z $\in -\frac{1}{2},1,2,3,...$\\%TODO
 \subsubsection{Beugung am Doppelspalt}
 Gangunterschied $\Delta = q\cdot\sin\alpha$\\
-Konstruktive Interferenz für Richtungen mit: $\Delta = Z \cdot \omega$\\
-Destruktive Interferenz für Richtungen mit: $\Delta = (Z+\frac{1}{2})\omega$\\
+Konstruktive Interferenz für Richtungen mit: $\Delta s = Z \cdot \lambda$\\
+Destruktive Interferenz für Richtungen mit: $\Delta s = (Z+\frac{1}{2})\lambda$\\
 %TODO Strichgitter, Kreuzgittertier VL19 NEIN
 %TODO evtl Fresnelsche Zonenplatte NEIN
 \subsection{Mikroskop}
 Auflösugnsvermögen Mikroskop mit Spalt b: $\Psi_{\text{min}} = \alpha = \arcsin\frac{\lambda}{b} \approx \frac{\lambda}{b}$ (Abbé Limit)\\
 für runde Linse mit Durchmesser D: $D\cdot\sin\alpha = 1,22\frac{\lambda}{D}$; $\Psi_{\text{min}} = 1,22\frac{\lambda}{D}$\\
 \subsubsection{Röntgenbeugung}
-Bragg-Bedingung konstruktive Interferenz: $m\lambda = 2d\sin\theta$\\
+Bragg-Bedingung konstruktive Interferenz: $n\lambda = 2d\sin\theta $, n$\in \N $\\
 \subsubsection{Polarisation von Licht}
 e-m-Welle ist transversaal, also $\v E \perp \v k$ bzw $\v B\perp\v k$\\
 linear polarisiert $\rightarrow$ E-Feld steht nur in eine Richtung\\
@@ -433,9 +432,9 @@ $I' = I\cdot\cos ^2\alpha$\\
 %Strömung einer viskosen Flüssigkeit durch  ein Rohr
 
 
-Dichte $\rho = \frac{m}{v}$\\
+Dichte $\rho = \frac{m}{V}$\\
 %TODO Dichte Süßwasser $ \approx \rho (T) = \rho_{\text{max}} -7 \cdot 10^{-3}(T-4)^2 $, T in °C\\
-Normalkraft $\v F_N$: $\rho = \frac{F_N}{A}$\\
+Normalkraft $\v F_N$ senkrecht zur Oberfläche A erzeugt Druck $p = \frac{F_N}{A}$\\
 Schweredruck: $p_s = \rho_{\text{Fl}}\cdot h\cdot g$\\
 %TODO Formel hydraulischer Lift? VL19
 Kompressibilität $\kappa = -\frac{1}{p}\cdot \frac{\Delta V}{V} \rightarrow \frac{\delta V}{V}=-\kappa\cdot \delta p$\\
@@ -453,8 +452,8 @@ $\rho_k < $ (=) [$>$]$ \rho_{\text{Fl}}$: Körper schwimmt (schwebt) [sinkt]\\ %
 \\
 Oberflächenspannung $\gamma = \frac{F}{L} = \frac{dE}{dA}$ (auch $\sigma$)\\
 $\sigma_{\text{Wasser}} =$ 0.073 N/m\\
-Kapillarspannung $p_{\text{kap}} = \sigma(\frac{1}{r_21}+\frac{1}{r_2})$\\
-kreisrunde Kapillare: $p_{\text{kap}} = \frac{2\sigma}{r}\cos (\phi) \Leftrightarrow p_S = \rho\cdot g\cdot h_{\text{kap}}$\\
+Kapillarspannung $p_{\text{kap}} = \sigma(\frac{1}{r_1}+\frac{1}{r_2})$\\
+kreisrunde Kapillare: $p_{\text{kap}} = \frac{2\sigma}{r}\cos (\phi)$, mit Kontaktwinkel $\phi$ $\Leftrightarrow p_S = \rho\cdot g\cdot h_{\text{kap}}$\\
 %TODO Steighöhe $h_{\text{kap}} = \frac{2\sigma}{\rho gr}\cos(\phi}$\\
 %TODO Bild benetzend oder nicht
 
@@ -462,21 +461,22 @@ kreisrunde Kapillare: $p_{\text{kap}} = \frac{2\sigma}{r}\cos (\phi) \Leftrighta
 $\textbf{laminare Strömung:}$ kleine Geschwindigkeiten, große innere Reibung, geringe Reibung mit Wänden\\
 $\textbf{turbulente Strömung:}$ große Geschwindigkeiten, geringe innere Reibung, hohe Reibung mit Wänden\\
 
-Kontinuitätsgleichung für inkompressible Flüssigkeit: $A_1\cdot V_1 = A_2\cdot V_2$\\
-Volumenstrom $\dot V = \frac{dV}{dt} = A\cdot V$ ist konstant\\
+Kontinuitätsgleichung für inkompressible Flüssigkeit: $A_1\cdot v_1 = A_2\cdot v_2$, mit Querschnittsfläche A\\
+Volumenstrom $\dot V = \frac{dV}{dt} = A\cdot v$ ist konstant\\
 %TODO evtl mit Masse des Volumenelements
-Bernoulligleichung: $p + \rho\cdot g\cdot y + \frac{1}{2}\cdot \rho\cdot v^2 =$ const.\\
+Bernoulligleichung: $p + \rho\cdot g\cdot h + \frac{1}{2}\cdot \rho\cdot v^2 =$ const., mit geodätischer Höhe h\\
 Hydrodynamisches Paradoxon: Gleichgewicht bei $mg = \iffalse $p_{\text{atm}}\cdot A - p_1\cdot A =$ \fi
 \frac{1}{2} \rho  v^2  A$\\ 
 ideale Gasgleichung: $ \fr{\rho _0}{P_0} = \fr{M}{RT}$\\
-Luftdruck: $p(h) = 1013hPa\cdot\exp{-\frac{h}{8428m}}$\\
+Luftdruck: $p(h) = 1013hPa\cdot\exp{-\frac{h}{8428m}}$, $h_s = \frac{RT}{Mg} = 8428m$\\
 
 Viskosität: Lineares Geschwindigkeitsprofil: $F = \eta\cdot A\cdot\frac{v}{z}$ mit z = Abstand\\
 Viskosität $\eta$ ist stark Temperaturabhängig\\
 
 Strömung einer viskosen Flüssigkeit durch ein Rohr: $v(r) = \frac{p_1-p_2}{4\cdot\eta\cdot l}\cdot(R^2-r^2)$, v steigt parabelförmig zur Mitte hin an\\
-Volumenstrom $ \dot V =$\\ $\frac{\pi\cdot (p_1-p_2)}{2\cdot\eta\cdot l}\cdot\lfloor R^2\int_0^R r\cdot dr - \int_0^Rr^3\cdot dr\rfloor \frac{\pi\cdot(p_1-p_2)}{2\cdot\eta\cdot l}\cdot \lfloor \frac{R^4}{2}-\frac{R^4}{4}\rfloor $\\
-$\rightarrow$ Gesetz von Hagen-Poiseuille: $\dot V  = \frac{\pi\cdot(p_1-p_2)}{8\cdot\eta\cdot l}\cdot R^4$ (für laminare Strömung)\\
+Volumenstrom: %$ \dot V =$ $\frac{\pi\cdot (p_1-p_2)}{2\cdot\eta\cdot l}\cdot\lfloor R^2\int_0^R r\cdot dr - \int_0^Rr^3\cdot dr\rfloor =$
+%$\frac{\pi\cdot(p_1-p_2)}{2\cdot\eta\cdot l}\cdot \lfloor \frac{R^4}{2}-\frac{R^4}{4}\rfloor $\\ $\rightarrow$ 
+Gesetz von Hagen-Poiseuille: $\dot V  = \frac{\pi\cdot(p_1-p_2)}{8\cdot\eta\cdot l}\cdot R^4$ (für laminare Strömung)\\
 
 Reynolds Zahl: $R_e = \frac{v \cdot\rho \cdot L}{\eta}$ mit L: char. Länge/Durchm. des Körpers:\\ 
 1) für $R_e >> 1$: Newtonsches Reibungsgesetz $F = c_W \cdot A \cdot \frac{\rho\cdot v^2}{2}$\\
@@ -488,22 +488,18 @@ Rein laminare Strömung bei $R_e \leq 0.1$\\
 
 
 \section{Thermodynamik}
-
-%Mensch Sepp, beeil dich mit deiner Vorlesung
-
-
 Vielteilchensysteme $\rightarrow$ Mittelung\\
 
 Wärmemenge Q bei Erwärmung: $Q = C_p\cdot (T_2 - T_1)$ mit $C_p =$ Wärmekapazität in $\frac{J}{K}$\\
-Gaskonstante: $R = C_{\text{p(mol)}} - C_{\text{v(mol)}}$ bzw. $\nu R = C_p - C_p$\\
-spezifische Wärmekapazität $c = \frac{C}{m} = \frac{\Delta Q}{\Delta T\cdot m}$ mit $\Delta Q$: Wärmezufuhr , $\Delta T$: Temperaturerhöhung, $m$: Masse des Körpers\\
-Wärmekapazität bei konstantem Druck (ideales Gas): $pV = \nu RT$\\
+Gaskonstante: $R = C_{\text{p(mol)}} - C_{\text{v(mol)}}$ bzw. $n R = C_p - C_p$, mit Wärmekapazität $C_p$ bei isobarer, $C_v$ bei isochorer Zustandsänderung\\
+spezifische Wärmekapazität $c = \frac{C}{m} = \frac{\Delta Q}{\Delta T\cdot m}$, mit $\Delta Q$: Wärmezufuhr , $\Delta T$: Temperaturerhöhung, $m$: Masse des Körpers\\
+%Wärmekapazität bei konstantem Druck (ideales Gas): $C_p = pV = n RT$\\
 
-Zustandsgleichung des idealen Gases: $\rho\cdot V  = \nu\cdot R\cdot T = N\cdot k_B\cdot T$ mit $\nu$ Anzahl der Moleküle, R = 8.314 $\frac{J}{mol\cdot K}$, N Anzahl der Gasatome\\%$k_B = \frac{R}{N_{\text{Av}}} = 1.381\cdot 10^{-23}$ Boltzmannkonstante\\
+Zustandsgleichung des idealen Gases: $\rho\cdot V  = n \cdot R\cdot T = N\cdot k_B\cdot T$ mit $n$ Stoffmenge in Mol, R = 8.314 $\frac{J}{mol\cdot K}$, N Anzahl der Gasatome\\%$k_B = \frac{R}{N_{\text{Av}}} = 1.381\cdot 10^{-23}$ Boltzmannkonstante\\
 \\Kinetische Gastheorie $pV = Nm\langle v_z^2 \rangle$\\
 %TODO evtl VL 21 S6 oben
 mittlere kin. Energie der Teilchen eines idealen Gases $\bar{E}_{\text{kin}} = \frac{3}{2}k_B T$\\
-Gesamte Translationsenergie eines idealen Gases: $\frac{3}{2}\frac{RT}{Mol}$\\
+Gesamte Translationsenergie eines idealen Gases: $\frac{3}{2}\frac{RT}{M}$\\
 
 \subsection{Hauptsätze der Thermodynamik}
 \begin{itemize}
@@ -514,12 +510,14 @@ $\textbf{Verschiedene Möglichkeiten für Zustandsänderung:}$\\
 a) Isobarer Prozess, $p =$ const. $\rightarrow$ im idealen Gas ist $C_p$ konstant $\Rightarrow Q_{12} = C_p \Delta T$\\
 b) Isochorer Prozess: $V =$ const. $\rightarrow$ im idealen Gas ist $C_v$ konstant $\Rightarrow Q_{12} = \Delta U$\\
 c) Isotherme Prozesse: $T =$ const. $\Rightarrow$ $W_{12} = -Q_{12}$ %Umsetzung der Wärmezufuhr in Arbeit $\Rightarrow W_{12} = \\$
-$ =\nu RT \ln\frac{V_1}{V_2}$, Freiwerdende Wärme: $Q_{12} = -W_{12}$\\
+$ =n RT \ln\frac{V_1}{V_2}$, Freiwerdende Wärme: $Q_{12} = -W_{12}$\\
 d) Adiabatische Prozesse: $\Delta Q = 0$
 %TODO Isochorer Prozess, Isothermer Prozess, adiabatischer Prozess verbessern
 
-In differentieller Schreibweise: $\delta U = \delta W + \delta Q $\\
-\item 2.Thermische Energie ist nicht in beliebigem Maße in andere Energiearten umwandelbar
+In differentieller Schreibweise: $\partial U = \partial W + \partial Q $\\
+\item 2. Thermische Energie ist nicht in beliebigem Maße in andere Energiearten umwandelbar. $\eta$ < 1
+\item 3. Nernst'sches Theorem: $\lim_{T \rightarrow 0} S(T) = 0$ (Entropie bei 0 K ist 0)\\
+\\
 \\
 \end{itemize}
 %TODO Formeln mit $\propto$
@@ -528,25 +526,22 @@ In differentieller Schreibweise: $\delta U = \delta W + \delta Q $\\
 %TODO Adiabatengleichung
 %\subsection{Zustandsänderungen: Hauptsätze der Thermodynamik II}
 \subsection{Zustandsänderungen, Thermodynamische Systeme}
-Adiabatengleichung $p\cdot V^\kappa =$ const\\
-
+Adiabatengleichung $p\cdot V^\kappa =$ const\\, mit $\kappa$ Adiabatenexponent ($\frac{C_p}{C_v}$)\\
 Carnotscher Kreisprozess: Idee der Wärmekraftmaschine\\
-Wirkungsgrad $\eta = \frac{\vert W\vert}{Q_{12}}$, $\eta_{\text{Carnot}} = \frac{\vert -\nu R(T_2-T_1)\cdot\ln(\frac{V_2}{V_1})\vert}{\nu RT_2\cdot\ln(\frac{V_2}{V_1})} = \frac{T_2-T_1}{T_2} < 1$\\
+Wirkungsgrad $\eta = \frac{\vert W\vert}{Q_{12}}$, $\eta_{\text{Carnot}} = \frac{\vert - n R(T_2-T_1)\cdot\ln(\frac{V_2}{V_1})\vert}{n RT_2\cdot\ln(\frac{V_2}{V_1})} = \frac{T_2-T_1}{T_2} < 1$\\
 %\subsection{Zustandsänderungen, Thermodynamische Systeme}
 \subsection{Reversible und irreversible Prozesse}
-Reversibler Prozess: z.B. Carnot- oder Stirling- Motor\\
-Irreversibler Prozess $\eta_{\text{irreversibel}} < \eta_{\text{Carnot}}$ Es kann nicht mehr in den Ausganszustand zurückgegangen werden\\
+Reversibler Prozess: z.B. Carnot- oder Stirling- Motor %$\rightarrow$ Wärmekraftmaschine, die durch abwechselnde Kompression und Expansion eines Gases als Wärmepumpe/Kältemaschine (bzw. Motor bei externer Wärmeeinwirkung) genutzt werden kann.\\
+Irreversibler Prozess $\eta_{\text{irreversibel}} < \eta_{\text{Carnot}}$: Es kann nicht mehr in den Ausganszustand zurückgegangen werden\\
 
-Entropie S: $\delta S = \frac{dQ_{\text{rev}}}{T} = \Delta S = \int \frac{dQ_{\text{rev}}}{T}$\\
+Entropie S: $\partial S = \frac{dQ_{\text{rev}}}{T} \qquad \Delta S = \int \frac{dQ_{\text{rev}}}{T}$\\
 Für ideales Gas: $\Delta S = n\cdot C_v\cdot\ln\frac{T_2}{T_1} + n\cdot R\cdot\ln\frac{V_2}{V_1}$\\
-Nernst'sches Theorem: $\lim_{T \rightarrow 0} S(T) = 0$ (Entropie bei 0 K ist 0)\\
-\\
 \subsubsection{Das reale Gas}
 1. Endliche Ausdehnung der Moleküle: $V_{\text{real}} = V_{\text{ideal}} + nb$ mit b= Eigenvolumen von 1 Mol\\
-2. Anziehung: van-der-Waals-Kraft: $p_{\text{real}} = p_{\text{ideal}} - a(\frac{n}{V^2} \rightarrow$ Druckreduktion\\
+2. Anziehung: van-der-Waals-Kraft: $p_{\text{real}} = p_{\text{ideal}} - a(\frac{n}{V^2}) \rightarrow$ Druckreduktion\\
 mit Materialkonstante a, welche die vdW-Kräfte berücksichtigt\\
 
-Modifizierte Gasgleichung: $(p+a\frac{n^2}{V^2})\cdot(V-nb) = n\cdot R\cdot T$\\
+Van-der-Waals-Gasgleichung: $(p+a\frac{n^2}{V^2})\cdot(V-nb) = n\cdot R\cdot T$\\
 \\
 Wärmeleitung: $\dot Q = \frac{dQ}{dt} = - \lambda  A \frac{dT}{dx}$\\
 
@@ -558,9 +553,6 @@ Wärmeleitung: $\dot Q = \frac{dQ}{dt} = - \lambda  A \frac{dT}{dx}$\\
 %Unschärferelation
 %Schrödingergleichung
 %Lösung der Schrödingergleichung für verschiedene Potentiale
-
-
-%Es ist kaum noch Zeit, wie sollen wir das in ein paar Tagen schaffen?
 
 Wärmestrahlung: Gesetz von Stefan und Boltzmann: 
 Strahlungsleistung Schwarzkörper $P_s$ eines schwarzen Körpers = $ P_S = \sigma\cdot A\cdot T^4 $\\
