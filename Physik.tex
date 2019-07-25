@@ -10,6 +10,12 @@
 %\renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
 %\renewcommand{\thesubsubsection}{\thesection.\thesubsection.\Roman{subsubsection}}
 
+\iffalse
+\fancyfoot[R]{Created \today \ at \thistime \qquad \thepage}
+\fancyfoot[L]{Homepage: \href{www.latex4ei.de}{www.latex4ei.de} -- please report misstakes \emph{immediately}.}
+\fancyfoot[C]{by Emanuel Regnath, contact \emph{\href{mailto:emanuel.regnath@tum.de}{emanuel.regnath@tum.de}}}
+\fi
+
 % Dokumentbeginn
 % ======================================================================
 \begin{document}
@@ -498,7 +504,7 @@ spezifische Wärmekapazität $c = \frac{C}{m} = \frac{\Delta Q}{\Delta T\cdot m}
 Zustandsgleichung des idealen Gases: $\rho\cdot V  = n \cdot R\cdot T = N\cdot k_B\cdot T$ mit $n$ Stoffmenge in Mol, R = 8.314 $\frac{J}{mol\cdot K}$, N Anzahl der Gasatome\\%$k_B = \frac{R}{N_{\text{Av}}} = 1.381\cdot 10^{-23}$ Boltzmannkonstante\\
 \\Kinetische Gastheorie $pV = Nm\langle v_z^2 \rangle$\\
 %TODO evtl VL 21 S6 oben
-mittlere kin. Energie der Teilchen eines idealen Gases $\bar{E}_{\text{kin}} = \frac{3}{2}k_B T$\\
+mittlere kin. Energie der Teilchen eines idealen Gases $\bar{E}_{\text{kin}} = \frac{3}{2}k_B T$\\ % Wir haben keine Freiheitsgrade eingeführt nur $3/2k_B$ angenommen
 Gesamte Translationsenergie eines idealen Gases: $\frac{3}{2}\frac{RT}{M}$\\
 
 \subsection{Hauptsätze der Thermodynamik}
@@ -633,12 +639,6 @@ Ergebnis: $0 = 2Ai\sin(ka)$, $ka = n\pi$; $n = 1,2,3,...$ und $\psi = 2Ai\sin(\f
 Wichtige Eigenschaft: Die Energien $E_n$ sind diskret\\
 
 Coulombsches Gesetz: $E_{\text{pot}}(r) = \frac{Q^2}{4\pi\varepsilon_0}\cdot\frac{1}{r}$\\
-
-
-
-
-
-%TODO Wir haben statt Potentialen nur $3/2k_B$ angenommen WEITER OBEN IST EGAL
 
 \end{multicols*}
 \end{document}
