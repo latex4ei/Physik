@@ -247,10 +247,11 @@ $\ddot{\theta}+\frac{D}{J}\theta = 0 \Rightarrow \omega = \sqrt{\frac{D}{J}}$\\
 \subsubsection{Gedämpfter harmonischer Oszillator}
 Stoke'sche Reibungskraft: $F_R = -bv = -b\dot{x}$\\
 Bewegungsgleichung: $\ddot{x} + 2\gamma \dot{x} + \omega_0^2x = 0$; mit 2$\gamma$ = $\frac{b}{m}$\\
-Lösungsansatz mit Cosinus: $x = Ae^{-\gamma t} \cos(\omega 't)$ \\mit $\omega ' = \sqrt{\omega_0^2-\gamma^2}$\\
-schwache Dämpfung: $x = Ae^{-\gamma \frac{-t}{t_L}} \cos(\omega 't); \gamma = \frac{b}{2m}; \omega_0 = \sqrt{\frac{k}{m}}$\\
+Lösungsansatz mit Cosinus: $x = Ae^{-\gamma t} \cos(\omega 't)$ \\mit $\omega ' = \sqrt{\omega_0^2-\gamma^2}, \gamma = \frac{b}{2m}$, $\omega_0 = \sqrt{\frac{k}{m}}$\\
+schwache Dämpfung: $\gamma < \omega_0 \rightarrow$ $x = Ae^{- \frac{t}{t_{\text{\tiny L}}}} \cos(\omega 't)$\\
 aperiodischer Grenzfall: $\gamma = \omega_0 \rightarrow	\omega' = 0$\\
-überkritische Dämpfung: $\omega \ll \omega_0 \rightarrow \omega' = \sqrt{\omega_0^2 - \gamma^2}$ = img. $\omega'$ wird imaginär. Das System schwingt nicht, kehrt langsam in GGP zurück\\ 
+überkritische Dämpfung: $\gamma \gg \omega_0 \rightarrow \omega' = \sqrt{\omega_0^2 - \gamma^2}$ = img.\\ $\rightarrow$ Das System schwingt nicht, kehrt langsam in GGP zurück\\
+
 $t_L$ = mittlere Lebensdauer, Zeit auf 1/e der Amplitude\\
 
 \subsection{Wellen}
@@ -271,17 +272,16 @@ Ausbreitungsgeschw. $\nu_{\text{Transv.}} = \sqrt{\frac{F}{\mu}}$, $\nu_{\text{L
 Schwingungsenergie des Teilchens: $E = \frac{1}{2}kD_M^2$\\
 $k = 4\pi ^2mf^2; E = 2\pi^2mf^2D_M^2$\\
 $m = \rho V = \rho A v t; \Delta E = 2\pi^2 \rho A v \Delta tf^2D_M^2$\\
-Durchschnittliche Leistung: $\ol{P} = fr{\Delta E}{\Delta t} = 2\pi ^2 \rho a v f^2 D_M^2$\\
+Durchschnittliche Leistung: $\ol{P} = \fr{\Delta E}{\Delta t} = 2\pi ^2 \rho a v f^2 D_M^2$\\
 %TODO Overline oben definieren und stattdessen mean, RMS; Dach als peak definieren, etc %TODO NICHT WÄHREND PRÜFUNGSPHASE
 Intensität: $ I = \fr{\ol{P}}{A} = 2\pi^2\rho v f^2D_M^2$\\
-Intensität sphärische Welle: $I = \frac{\hat{P}}{r\pi r^2}$\\
-$D_M \propto \frac{1}{r}$\\
+Intensität sphärische Welle: $I = \frac{\hat{P}}{r\pi r^2}$, $D_M \propto \frac{1}{r}$\\
 %TODO Mathematische Beschreibung der Wellenausbreitung, Wellengleichung VL12 %TODO
 Schallpegel $L = 10\log{\frac{I}{I_0}}$dB mit $I_0 = 10^{-12}\frac{W}{m^2}$, 1dB = 10Bel\\
 %TODO evtl Schallpegeltabelle %TODO SICHER NICHT
 %TODO Superpositionsprinzip VL13
 \\
-Reflexion bei elektr. Leitungen: $ r = \frac{Z_L-Z_0}{Z_L+Z_0}$ mit Impedanz Z\\
+Reflexion bei elektr. Leitungen: $ r = \frac{Z_{\text{Last}}-Z_0}{Z_{\text{Last}}+Z_0}$\\
 %TODO subsection Interferenz VL14, Überlagerung von Wellen unterschiedlicher Frequenz
 
 \subsection{Geometrische Optik}
@@ -581,14 +581,63 @@ Phasengeschwindigkeit ist die Geschwindigkeit, bei der die zeitliche Änderung d
 %Photonen: $\v_{\text{ph}} = \frac{\omega}{k}$ 
 %$= \frac{w\pi f}{\frac{2\pi}{\lambda}} = \frac{E}{p} = \frac{\frac{1}{2}mv_r^2}{mv_r} = \frac{1}{2}v_r $\\ $Massebehaftete Teilchen, nicht relativistisch, S25 VL23\\
 Phasengeschwindigkeit $V_{\text{ph}}  \leftrightarrow$ Ausbreitungsgeschwindigkeit $\frac{1}{2}v_T$\\
-
-Wird am Donnerstag vervollständigt
+$y(x,t) = 2y_0 \sin(kx-\omega t)\cos(\Delta kx - \Delta \omega t)$\\
 \subsection{Unschärferelation}
-Wird am Donnerstag vervollständigt
+Ansatz: $\psi(x,t)  \int_{k_o - \frac{\Delta k}{2}}^{k_0 + \frac{\Delta k}{2}} C(k)e^{i(\omega t - kx)} dk$
+Lösung: $\psi(x,t) = 2C \frac{\sin(u\frac{\Delta k}{2}}{u}$\\
+Teil der Lösung: $u = ( (\frac{d\omega}{dk})_{k0}\cdot t-x$ mit $\nu_{gr} = (\frac{d\omega}{dk}_{k0}$\\
+$\Delta x\cdot \Delta k = 2\pi$\\
+Breite der Wellenfunktion $\Delta x$ bei $\Delta k$ mit $p = \hbar m$\\
+$\Delta x\cdot \Delta p_x \geq \hbar$\\
+Genauigkeit der Frequenzmessung hängt von der Lebensdauer des Zustandes ab: $\Delta \omega = \frac{1}{\tau}$\\
+Zur Deutung von $\psi(x,t)$:
+"Wahrscheinlichkeitsdichte" $|\psi(x,t)|^2$\\ $\psi(x,t)$ muss NORMIERT werden, da die Summe aller Wahrscheinlichkeiten zum Auftreten des Teilchens an allen Orten x und Zeiten t gleich 1 ist (100\% !)\\
+
+Allgemein im Raum:$\iiint$\\
+
 \subsection{Schrödingergleichung}
-Wird am Donnerstag vervollständigt
+Erwin Schrödinger (1887 - 1961)\\
+Räumliche und zeitliche Entwicklung von $\psi$ und damit der Wahrscheinlichkeit $W(\v x, t) = |\psi(\v x, t)|^2$\\
+Muss DGL erster Ordnung sein (damit an $t_0$ durch Anfangsbedingung bestimmt), muss homogen sein, Lösungen sollten harmonische Wellen sein, damit man sie Superpositionieren kann (z.B. für Wellenpakete)\\
+
+Ansatz:$\psi(x,t) = Ae^{i(kx-\omega t)}$\\
+$\psi(x,t) = Ae^{\frac{i}{\hbar} (p_x x - E_{\text{kin}} t) }$ Ziel ist DGL für $\psi$\\S
+Stationärer Fall: E hängt nicht von t ab: $\psi(x) = Ae^{ikx}$\\
+$E_{\text{kin}} + E_{\text{pot}} = E$ $E_{\text{kin}} = \frac{p^2}{2m} = \frac{\hbar^2 k^2}{2m}+ E_{\text{pot}} = E$\\
+Zweimaliges Differenzieren von $\psi$:\\
+$\frac{\partial^2\psi(x)}{\partial x^2} = -k^2\psi(x)$\\
+
+Stationäre Schrödingergleichung in einer Dimension: $-\frac{\hbar^2}{2m}\frac{\partial^2\psi}{\partial x^2}+E_{\text{pot}} = E\psi(x)$\\
+
+Verallgemeinerung auf 3 Dimensionen: 
+$ - \frac{\hbar^2}{2m}\Delta \psi + E_{\text{pot}} \psi = E \psi$\\
+mit Laplaceoperator $\Delta = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2}$\\ und Hamiltonoperator $\hat H = - \frac{\hbar^2}{2m}\Delta + E_{\text{pot}}$\\
+
+Zeitabhängigkeit : $\frac{d\psi(x,t)}{dt} = - \frac{i}{\hbar}E_{\text{kin}}\psi$\\
+Von vorher: $\Rightarrow E_{\text{kin}} = \frac{\partial^2\psi}{\partial x^2}\cdot( - \frac{\hbar^2}{2m}$\\
+
+Zeitabhängige Schrödingergleichung: $i\hbar \frac{\partial \psi}{\partial t}= \hat H \psi$\\
+$\hat H \psi = E \psi$\\
+
+
 \subsection{Lösung der Schrödingergleichung für verschiedene Potentiale}
-Wird am Donnerstag vervollständigt
+%TODO Evtl S14
+Für $E_{\text{pot}} = 0$: $\bar H \psi = i\hbar \frac{\partial \psi}{\partial t}$\\
+Für unendlichen Potentialtop: $ - \frac{\hbar^2}{2m}\frac{\partial^2 \psi}{\partial x} + E_{\text{pot}}\psi = E\psi$\\
+Allgemeiner Lösungsansatz: $\psi = Ae^{ikx} + Be^{-ikx}$\\
+Mit Randbedinungen: $\frac{\partial ^2 \psi}{\partial x^2}$ definiert und $\psi = 0$ bei $x=0 und x=a$\\
+
+Ergebnis: $0 = 2Ai\sin(ka)$, $ka = n\pi$; $n = 1,2,3,...$ und $\psi = 2Ai\sin(\frac{n\pi}{a}x)$\\
+
+Wichtige Eigenschaft: Die Energien $E_n$ sind diskret\\
+
+Coulombsches Gesetz: $E_{\text{pot}}(r) = \frac{Q^2}{4\pi\varepsilon_0}\cdot\frac{1}{r}$\\
+
+
+
+
+
+%TODO Wir haben statt Potentialen nur $3/2k_B$ angenommen WEITER OBEN IST EGAL
 
 \end{multicols*}
 \end{document}
