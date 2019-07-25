@@ -294,7 +294,7 @@ Dielektrizitätskonstante $\varepsilon = n^2 $\\
  Brechungsgesetz von Snellius: $\frac{\sin\theta_1}{\sin\theta_2} = \frac{v_1}{v_2}  = \frac{c/n_1}{c/n_2} = \frac{n_2}{n_1}$\\
 %Snellius'sche Gesetz für bestimmte Winkel: $n_1\sin\theta_1 = n_2\sin\theta_2$\\
 Licht bricht immer zum Medium mit dem höheren Index hin\\
-$\textbf{Fermatsches Prinzip}$: Licht folgt dem Weg mit der kürzesten Laufzeit$: \frac{dt}{dx} = 0$\\
+$\textbf{Fermatsches Prinzip}$: Licht folgt dem Weg mit der kürzesten Laufzeit$: \frac{dt}{dx} = 0$; Optischer Weg: $\int_{\gamma}n$\\
 %TODO evtl Fata Morgana
 Optische Wand, parallelverschiebung um $\Delta d:$\\$d = t\cdot\sin(\alpha)\cdot\left[-\frac{\cos\alpha}{\sqrt{n^2- \sin ^2(\alpha}}\right]$\\
 Totalreflexion: falls $\theta>\theta_g$: $\sin(\theta_g) = \frac{n_2}{n_1}$\\
@@ -389,10 +389,10 @@ Fabry-Perot-Interferometer: Wellenlängenauflösung: $\frac{\Delta \lambda}{\lam
 Huygens-Fresnel-Prinzip: jeder Raumpunkt ist Ausgangspunkt für eine neue Kugelwelle (Elementarwelle)\\
 
 \subsubsection{Beugung am Einfachspalt}
-Bedingung für Minima: $a\cdot\sin\theta = Z\cdot\lambda$, mit Z $\in 1,2,3,...$\\ %TODO besser
+Bedingung für Minima: $a\!\cdot\!\sin\theta = Z\cdot\lambda$, mit Z $\in 1,2,3,...$\\ %TODO besser
 Bedingung für Maxima: $a\cdot\sin\theta = (Z+\frac{1}{2})\cdot\lambda$, mit Z $\in -\frac{1}{2},1,2,3,...$\\%TODO
 \subsubsection{Beugung am Doppelspalt}
-Gangunterschied $\Delta = q\cdot\sin\alpha$\\
+Gangunterschied $\Delta s = q\cdot\sin\alpha$\\
 Konstruktive Interferenz für Richtungen mit: $\Delta s = Z \cdot \lambda$\\
 Destruktive Interferenz für Richtungen mit: $\Delta s = (Z+\frac{1}{2})\lambda$\\
 %TODO Strichgitter, Kreuzgittertier VL19 NEIN
@@ -468,9 +468,9 @@ Bernoulligleichung: $p + \rho\cdot g\cdot h + \frac{1}{2}\cdot \rho\cdot v^2 =$ 
 Hydrodynamisches Paradoxon: Gleichgewicht bei $mg = \iffalse $p_{\text{atm}}\cdot A - p_1\cdot A =$ \fi
 \frac{1}{2} \rho  v^2  A$\\ 
 ideale Gasgleichung: $ \fr{\rho _0}{P_0} = \fr{M}{RT}$\\
-Luftdruck: $p(h) = 1013hPa\cdot\exp{-\frac{h}{8428m}}$, $h_s = \frac{RT}{Mg} = 8428m$\\
+Luftdruck: $p(h) = 1013hPa\cdot\exp{-\frac{h}{h_s}}$, $h_s = \frac{RT}{Mg} = 8428m$\\
 
-Viskosität: Lineares Geschwindigkeitsprofil: $F = \eta\cdot A\cdot\frac{v}{z}$ mit z = Abstand\\
+Viskosität: Lineares Geschwindigkeitsprofil: $F = \eta\cdot A\cdot\frac{v}{z}$ mit Abstand z\\
 Viskosität $\eta$ ist stark Temperaturabhängig\\
 
 Strömung einer viskosen Flüssigkeit durch ein Rohr: $v(r) = \frac{p_1-p_2}{4\cdot\eta\cdot l}\cdot(R^2-r^2)$, v steigt parabelförmig zur Mitte hin an\\
@@ -546,7 +546,7 @@ Van-der-Waals-Gasgleichung: $(p+a\frac{n^2}{V^2})\cdot(V-nb) = n\cdot R\cdot T$\
 Wärmeleitung: $\dot Q = \frac{dQ}{dt} = - \lambda  A \frac{dT}{dx}$\\
 
 
-
+\vspace{-8mm}
 \section{Quantenmechanik}
 %Welle-Teilchen-Dualismus
 %Wellenfunktion
@@ -597,6 +597,7 @@ Allgemein im Raum:$\iiint$\\
 
 \subsection{Schrödingergleichung}
 Erwin Schrödinger (1887 - 1961)\\
+
 Räumliche und zeitliche Entwicklung von $\psi$ und damit der Wahrscheinlichkeit $W(\v x, t) = |\psi(\v x, t)|^2$\\
 Muss DGL erster Ordnung sein (damit an $t_0$ durch Anfangsbedingung bestimmt), muss homogen sein, Lösungen sollten harmonische Wellen sein, damit man sie Superpositionieren kann (z.B. für Wellenpakete)\\
 
@@ -607,7 +608,7 @@ $E_{\text{kin}} + E_{\text{pot}} = E$ $E_{\text{kin}} = \frac{p^2}{2m} = \frac{\
 Zweimaliges Differenzieren von $\psi$:\\
 $\frac{\partial^2\psi(x)}{\partial x^2} = -k^2\psi(x)$\\
 
-Stationäre Schrödingergleichung in einer Dimension: $-\frac{\hbar^2}{2m}\frac{\partial^2\psi}{\partial x^2}+E_{\text{pot}} = E\psi(x)$\\
+Stationäre Schrödingergl. in einer Dim.: $-\frac{\hbar^2}{2m}\frac{\partial^2\psi}{\partial x^2}+E_{\text{pot}} = E\psi(x)$\\
 
 Verallgemeinerung auf 3 Dimensionen: 
 $ - \frac{\hbar^2}{2m}\Delta \psi + E_{\text{pot}} \psi = E \psi$\\
