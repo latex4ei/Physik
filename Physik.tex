@@ -5,9 +5,9 @@
 \usepackage{multirow}
 \usepackage{latexnew}
 
-% Ausgegraut zum Abschreiben:
-%\definecolor{grey}{rgb}{0.8,0.8,0.8}
-%\color{grey}
+%\Ausgegraut zum Abschreiben:
+\definecolor{grey}{rgb}{0.8,0.8,0.8}
+\color{grey}
 
 \renewcommand{\thesection}{\Roman{section}}
 %\renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
@@ -498,7 +498,7 @@ Beschreibung von Vielteilchensystemen durch Mittelung\\
 
 Wärmemenge Q bei Erwärmung: $Q = C_p\cdot (T_2 - T_1)$, mit $C_p =$ Wärmekapazität in $\frac{J}{K}$\\
 Gaskonstante: $R = C_{\text{p(mol)}} - C_{\text{v(mol)}}$ bzw. $n R = C_p - C_p$, mit Wärmekapazität $C_p$ bei isobarer, $C_v$ bei isochorer Zustandsänderung\\
-spezifische Wärmekapazität $c = \frac{C}{m} = \frac{\Delta U}{\Delta T\cdot m}$, mit Wärmezufuhr $\Delta Q$, Temperaturerhöhung $\Delta T$, Masse des Körpers $m$\\
+spezifische Wärmekapazität $c = \frac{C}{m} = \frac{\Delta Q}{\Delta T\cdot m}$, mit Wärmezufuhr $\Delta Q$, Temperaturerhöhung $\Delta T$, Masse des Körpers $m$\\
 %Wärmekapazität bei konstantem Druck (ideales Gas): $C_p = pV = n RT$\\
 
 Zustandsgleichung des idealen Gases: $\rho\cdot V  = n \cdot R\cdot T = N\cdot k_B\cdot T$, mit $n$ Stoffmenge in Mol, Gaskonstante $R$ %= 8.314 $\frac{J}{mol\cdot K}$
@@ -520,7 +520,7 @@ $\textbf{b)}$ Isochorer Prozess: $V =$ const.\\ $\rightarrow$ im idealen Gas ist
 $\textbf{c)}$ Isotherme Prozesse: $T =$ const.\\ $\Rightarrow$ $W_{12} = -Q_{12}$ %Umsetzung der Wärmezufuhr in Arbeit $\Rightarrow W_{12} = \\$
 $ =n RT \ln\frac{V_1}{V_2}$\\
 Freiwerdende Wärme: $Q_{12} = -W_{12}$\\
-$\textbf{d)}$ Adiabatische Prozesse: $\Delta Q = 0$\quad$\Delta U \approx C_v(T_2-T_1)$\\
+$\textbf{d)}$ Adiabatische Prozesse: $\Delta Q = 0$\\
 %TODO Isochorer Prozess, Isothermer Prozess, adiabatischer Prozess verbessern\\
 In differentieller Schreibweise: $\partial U = \partial W + \partial Q $\\
 \item[2.] Thermische Energie ist nicht in beliebigem Maße in andere Energiearten umwandelbar. $\eta < 1$
@@ -548,7 +548,7 @@ Entropie S: $\partial S = \frac{dQ_{\text{rev}}}{T} \qquad \Delta S = \int \frac
 Für ideales Gas: $\Delta S = n\cdot C_v\cdot\ln\frac{T_2}{T_1} + n\cdot R\cdot\ln\frac{V_2}{V_1}$\\
 \subsubsection{Das reale Gas}
 1. Endliche Ausdehnung der Moleküle: $V_{\text{real}} = V_{\text{ideal}} + nb$, mit Eigenvolumen von 1 Mol: b\\
-2. Anziehung: van-der-Waals-Kraft: $p_{\text{real}} = p_{\text{ideal}} - a(\frac{n^2}{V^2})$, mit Materialkonstante a, welche die vdW-Kräfte berücksichtigt $\rightarrow$ Druckreduktion\\
+2. Anziehung: van-der-Waals-Kraft: $p_{\text{real}} = p_{\text{ideal}} - a(\frac{n}{V^2})$, mit Materialkonstante a, welche die vdW-Kräfte berücksichtigt $\rightarrow$ Druckreduktion\\
 
 Van-der-Waals-Gasgleichung: $(p+a\frac{n^2}{V^2})\cdot(V-nb) = n\cdot R\cdot T$\\
 \\
