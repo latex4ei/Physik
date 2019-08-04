@@ -7,7 +7,7 @@
 
 %\Ausgegraut zum Abschreiben:
 \definecolor{grey}{rgb}{0.8,0.8,0.8}
-%\color{grey}
+\color{grey}
 
 \renewcommand{\thesection}{\Roman{section}}
 %\renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
@@ -132,7 +132,7 @@ Momentane Geschwindigkeit: $v = \dt r$\\
 \subsubsection{Zweidimensionale Bewegungen}
 Unabhängige Bewegungen in den einzelnen Raumrichtungen\\
 Schiefer Wurf:
-Berechnung von z(x) durch Eliminieren von t: \\$x(t) = v_{0x}t \Rightarrow t = \fr{x}{v_{0x}}$\\
+Berechnung von z(x) durch Eliminieren von t: \\$x(t) = v_{0x}t \Rightarrow t = \frac{x}{v_{0x}}$\\
 $z(x) = -\frac{1}{2}g(\frac{{x}}{v_{0x}})^2 + \frac{v_{0z}}{v_{0x}}x = -\frac{g}{2v^2_{x0}}x^2 + tan\theta x$\\
 \subsection{Dynamik für Punktmassen}
 \subsubsection{Schiefe Ebene}
@@ -548,9 +548,9 @@ Entropie S: $\partial S = \frac{dQ_{\text{rev}}}{T} \qquad \Delta S = \int \frac
 Für ideales Gas: $\Delta S = n\cdot C_v\cdot\ln\frac{T_2}{T_1} + n\cdot R\cdot\ln\frac{V_2}{V_1}$\\
 \subsubsection{Das reale Gas}
 1. Endliche Ausdehnung der Moleküle: $V_{\text{real}} = V_{\text{ideal}} + nb$\\ mit Eigenvolumen von 1 Mol: b\\
-2. Anziehung: van-der-Waals-Kraft: $p_{\text{real}} = p_{\text{ideal}} - a(\frac{n}{V^2})$\\ mit Materialkonstante a, welche die vdW-Kräfte berücksichtigt \\$\rightarrow$ Druckreduktion\\
+2. Anziehung: van-der-Waals-Kraft: $p_{\text{real}} = p_{\text{ideal}} - a(\frac{n^2}{V^2})$\\ mit Materialkonstante a, welche die vdW-Kräfte berücksichtigt \\$\rightarrow$ Druckreduktion\\
 
-Van-der-Waals-Gasgleichung: $(p+a\frac{n^2}{V^2})\cdot(V-nb) = n\cdot R\cdot T$\\
+van-der-Waals-Gasgleichung: $(p+a\frac{n^2}{V^2})\cdot(V-nb) = n\cdot R\cdot T$\\
 \\
 Wärmeleitung: $\dot Q = \frac{dQ}{dt} = - \lambda  A \frac{dT}{dx}$\\
 
